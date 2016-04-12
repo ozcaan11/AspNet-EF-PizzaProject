@@ -40,11 +40,6 @@ namespace Pizza_Bootstarp.admin
             Response.Redirect("uye.aspx");
         }
 
-        protected void btnYeniUye_OnClick(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void btnEkle_OnClick(object sender, EventArgs e)
         {
             var user = db.Uyes.FirstOrDefault(u => u.u_kullanici_adi == txtKullaniciAdi.Text);
