@@ -11,7 +11,6 @@ namespace Pizza_Bootstarp.site
 {
     public partial class Master : System.Web.UI.MasterPage
     {
-        SqlConnection con = new SqlConnection("Data Source=L50A1D2;Initial Catalog=PizzaProject_1;Integrated Security=True");
         MyEntity db = new MyEntity();
         protected void Page_Load(object sender, EventArgs e)
         {
