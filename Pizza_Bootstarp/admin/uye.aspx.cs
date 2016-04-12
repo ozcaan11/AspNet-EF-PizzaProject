@@ -12,9 +12,7 @@ namespace Pizza_Bootstarp.admin
 {
     public partial class uye : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=L50A1D2;Initial Catalog=PizzaProject_1;Integrated Security=True");
         MyEntity db = new MyEntity();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["admin"] == null)
