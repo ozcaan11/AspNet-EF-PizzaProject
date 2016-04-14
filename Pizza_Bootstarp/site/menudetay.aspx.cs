@@ -37,9 +37,16 @@ namespace Pizza_Bootstarp.site
         {
             Button btn = (Button)e.Item.FindControl("btnKat");
             Label lbl = (Label)e.Item.FindControl("lblKat");
-            int id = Convert.ToInt32(btn.CommandArgument);
-            var kat = db.Kategoris.FirstOrDefault(x => x.k_id == id);
-            lbl.Text = kat.k_ad;
+            try
+            {
+                int id = Convert.ToInt32(btn.CommandArgument);
+                var kat = db.Kategoris.FirstOrDefault(x => x.k_id == id);
+                lbl.Text = kat.k_ad;
+            }
+            catch (Exception)
+            {
+                lbl.Text = "Kategori bulunamadı!";
+            }
         }
     }
 }

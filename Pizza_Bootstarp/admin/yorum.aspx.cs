@@ -96,46 +96,66 @@ namespace Pizza_Bootstarp.admin
         {
             Button btnUye = (Button) e.Item.FindControl("btn_uye");
             Label lblUye = (Label) e.Item.FindControl("lbl_uye");
-            int id = Convert.ToInt32(btnUye.CommandArgument);
-            var uye = db.Uyes.FirstOrDefault(x => x.u_id == id);
-            lblUye.Text = uye.u_ad;
-
             Button btnMenu = (Button) e.Item.FindControl("btn_menu");
             Label lblMenu = (Label) e.Item.FindControl("lbl_menu");
-            int _id = Convert.ToInt32(btnMenu.CommandArgument);
-            var menu = db.Menus.FirstOrDefault(x => x.m_id == _id);
-            lblMenu.Text = menu.m_baslik;
 
-            if (menu.m_baslik.Length > 25)
+
+            try
             {
-                lblMenu.Text = menu.m_baslik.Substring(0, 26) + " ...";
-            }
-            else
-            {
+                int id = Convert.ToInt32(btnUye.CommandArgument);
+                var uye = db.Uyes.FirstOrDefault(x => x.u_id == id);
+                lblUye.Text = uye.u_ad;
+
+                int _id = Convert.ToInt32(btnMenu.CommandArgument);
+                var menu = db.Menus.FirstOrDefault(x => x.m_id == _id);
                 lblMenu.Text = menu.m_baslik;
+
+                if (menu.m_baslik.Length > 25)
+                {
+                    lblMenu.Text = menu.m_baslik.Substring(0, 26) + " ...";
+                }
+                else
+                {
+                    lblMenu.Text = menu.m_baslik;
+                }
+            }
+            catch (Exception)
+            {
+                lblMenu.Text = "Menü bulunamadı!";
+                lblUye.Text = "Üye bulunamadı!";
             }
         }
 
         protected void rpOnaysizYorumlar_OnItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            Button btnUye = (Button)e.Item.FindControl("btn_uye");
-            Label lblUye = (Label)e.Item.FindControl("lbl_uye");
-            int id = Convert.ToInt32(btnUye.CommandArgument);
-            var uye = db.Uyes.FirstOrDefault(x => x.u_id == id);
-            lblUye.Text = uye.u_ad;
+            Button btnUye = (Button) e.Item.FindControl("btn_uye");
+            Label lblUye = (Label) e.Item.FindControl("lbl_uye");
+            Button btnMenu = (Button) e.Item.FindControl("btn_menu");
+            Label lblMenu = (Label) e.Item.FindControl("lbl_menu");
 
-            Button btnMenu = (Button)e.Item.FindControl("btn_menu");
-            Label lblMenu = (Label)e.Item.FindControl("lbl_menu");
-            int _id = Convert.ToInt32(btnMenu.CommandArgument);
-            var menu = db.Menus.FirstOrDefault(x => x.m_id == _id);
-            
-            if (menu.m_baslik.Length>25)
+
+            try
             {
-                lblMenu.Text = menu.m_baslik.Substring(0, 26) + " ...";
+                int id = Convert.ToInt32(btnUye.CommandArgument);
+                var uye = db.Uyes.FirstOrDefault(x => x.u_id == id);
+                lblUye.Text = uye.u_ad;
+
+                int _id = Convert.ToInt32(btnMenu.CommandArgument);
+                var menu = db.Menus.FirstOrDefault(x => x.m_id == _id);
+
+                if (menu.m_baslik.Length > 25)
+                {
+                    lblMenu.Text = menu.m_baslik.Substring(0, 26) + " ...";
+                }
+                else
+                {
+                    lblMenu.Text = menu.m_baslik;
+                }
             }
-            else
+            catch (Exception)
             {
-                lblMenu.Text = menu.m_baslik;
+                lblMenu.Text = "Menü bulunamadı!";
+                lblUye.Text = "Üye bulunamadı!";
             }
         }
 

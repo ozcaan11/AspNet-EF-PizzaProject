@@ -88,11 +88,19 @@ namespace Pizza_Bootstarp.admin
 
         protected void rpMenuler_OnItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            Button btn_kat = (Button) e.Item.FindControl("btn_kat");
-            Label lbl_kat = (Label) e.Item.FindControl("lbl_kat");
-            int id = Convert.ToInt32(btn_kat.CommandArgument);
-            var kat = db.Kategoris.FirstOrDefault(x => x.k_id == id);
-            lbl_kat.Text = kat.k_ad;
+            Button btnKat = (Button) e.Item.FindControl("btn_kat");
+            Label lblKat = (Label) e.Item.FindControl("lbl_kat");
+            try
+            {
+
+                int id = Convert.ToInt32(btnKat.CommandArgument);
+                var kat = db.Kategoris.FirstOrDefault(x => x.k_id == id);
+                lblKat.Text = kat.k_ad;
+            }
+            catch (Exception)
+            {
+                lblKat.Text = "Kategori bulunamadı";
+            }
         }
     }
 }

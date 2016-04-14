@@ -55,14 +55,22 @@ namespace Pizza_Bootstarp.admin
             Label lblUye = (Label) e.Item.FindControl("lbl_uye");
             Label lblMenu = (Label) e.Item.FindControl("lbl_menu");
 
-            int _uid = Convert.ToInt32(btnUye.CommandArgument);
-            int _mid = Convert.ToInt32(btnMenu.CommandArgument);
+            try
+            {
+                int _uid = Convert.ToInt32(btnUye.CommandArgument);
+                int _mid = Convert.ToInt32(btnMenu.CommandArgument);
 
-            var uye = db.Uyes.FirstOrDefault(x => x.u_id == _uid);
-            var menu = db.Menus.FirstOrDefault(x => x.m_id == _mid);
+                var uye = db.Uyes.FirstOrDefault(x => x.u_id == _uid);
+                var menu = db.Menus.FirstOrDefault(x => x.m_id == _mid);
 
-            lblUye.Text = uye.u_ad;
-            lblMenu.Text = menu.m_baslik;
+                lblUye.Text = uye.u_ad;
+                lblMenu.Text = menu.m_baslik;
+            }
+            catch (Exception)
+            {
+                lblMenu.Text = "Menü bulunamadı!";
+                lblUye.Text = "Üye bulunamadı!";
+            }
         }
 
         protected void btnOnayKaldir_OnClick(object sender, EventArgs e)
