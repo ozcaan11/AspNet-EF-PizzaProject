@@ -1,9 +1,12 @@
 # AspNet-EF-PizzaProject
 
 
-online pizza satış sitesi
+Online pizza satış sitesi
 
-#####Araçlar
+##### Kullanılan Araçlar
+| Microsoft Visual Studio - 2013
+----
+
 | Asp.net 
 ---- 
 
