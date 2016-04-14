@@ -13,7 +13,6 @@ namespace Pizza_Bootstarp.site
     public partial class profilguncelle : System.Web.UI.Page
     {
         MyEntity db = new MyEntity();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["kullanici"] == null)
