@@ -105,6 +105,22 @@
     <None Include="Scripts\jquery-2.2.3-vsdoc.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="site\anasayfa.aspx" />
+    <Content Include="site\giris.aspx" />
+    <Content Include="site\image\1.jpg" />
+    <Content Include="site\image\2.jpg" />
+    <Content Include="site\image\3.jpg" />
+    <Content Include="site\image\p1.jpg" />
+    <Content Include="site\image\p2.jpg" />
+    <Content Include="site\image\p3.jpg" />
+    <Content Include="site\image\y_1.jpg" />
+    <Content Include="site\image\y_2.jpg" />
+    <Content Include="site\image\y_3.jpg" />
+    <Content Include="site\kaydol.aspx" />
+    <Content Include="site\menudetay.aspx" />
+    <Content Include="site\menuler.aspx" />
+    <Content Include="site\profil.aspx" />
+    <Content Include="site\profilguncelle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -207,11 +223,60 @@
     <Compile Include="entities\Uye.cs" />
     <Compile Include="entities\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="site\anasayfa.aspx.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\anasayfa.aspx.designer.cs">
+      <DependentUpon>anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\giris.aspx.cs">
+      <DependentUpon>giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\giris.aspx.designer.cs">
+      <DependentUpon>giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\kaydol.aspx.cs">
+      <DependentUpon>kaydol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\kaydol.aspx.designer.cs">
+      <DependentUpon>kaydol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="site\Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="site\menudetay.aspx.cs">
+      <DependentUpon>menudetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\menudetay.aspx.designer.cs">
+      <DependentUpon>menudetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\menuler.aspx.cs">
+      <DependentUpon>menuler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\menuler.aspx.designer.cs">
+      <DependentUpon>menuler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\profil.aspx.cs">
+      <DependentUpon>profil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\profil.aspx.designer.cs">
+      <DependentUpon>profil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\profilguncelle.aspx.cs">
+      <DependentUpon>profilguncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\profilguncelle.aspx.designer.cs">
+      <DependentUpon>profilguncelle.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Master.Master" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="site\Master.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
