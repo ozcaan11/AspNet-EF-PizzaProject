@@ -1,4 +1,4 @@
-namespace Pizza_Bootstarp.Entity_Conf
+namespace Pizza_Bootstarp.entities
 {
     using System;
     using System.Collections.Generic;
@@ -15,10 +15,10 @@ namespace Pizza_Bootstarp.Entity_Conf
         [StringLength(150)]
         public string a_ad { get; set; }
 
+        public DateTime? a_degistirlme_tarihi { get; set; }
+
         public DateTime? a_eklenme_tarihi { get; set; }
 
         public double? a_fiyat { get; set; }
-
-        public IList<Menu> Menus { get; set; }
     }
 }

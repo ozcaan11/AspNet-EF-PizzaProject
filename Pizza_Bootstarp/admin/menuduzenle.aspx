@@ -21,8 +21,7 @@
         </div>
         <div class="input-group">
             <span class="input-group-addon">Kategori</span>  
-            <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server" DataSourceID="SqlDataSourceDrp" DataTextField="k_ad" DataValueField="k_id"></asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSourceDrp" runat="server" ConnectionString="<%$ ConnectionStrings:PizzaProject_1ConnectionString %>" SelectCommand="SELECT * FROM [Kategori]"></asp:SqlDataSource>
+            <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server" ></asp:DropDownList>
         </div>
         <hr />
         <div>

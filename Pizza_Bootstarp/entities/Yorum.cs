@@ -1,4 +1,4 @@
-namespace Pizza_Bootstarp.Entity_Conf
+namespace Pizza_Bootstarp.entities
 {
     using System;
     using System.Collections.Generic;
@@ -14,6 +14,8 @@ namespace Pizza_Bootstarp.Entity_Conf
 
         [Column(TypeName = "text")]
         public string y_icerik { get; set; }
+
+        public bool? y_onay { get; set; }
 
         public DateTime? y_yapma_tarihi { get; set; }
 

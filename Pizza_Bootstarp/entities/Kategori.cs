@@ -1,4 +1,4 @@
-namespace Pizza_Bootstarp.Entity_Conf
+namespace Pizza_Bootstarp.entities
 {
     using System;
     using System.Collections.Generic;
@@ -22,6 +22,8 @@ namespace Pizza_Bootstarp.Entity_Conf
         public string k_ad { get; set; }
 
         public DateTime? k_eklenme_tarihi { get; set; }
+
+        public DateTime? k_degistirilme_tarihi { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Menu> Menus { get; set; }

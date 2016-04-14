@@ -6,13 +6,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Pizza_Bootstarp.Entity_Conf;
+using Pizza_Bootstarp.entities;
 
 namespace Pizza_Bootstarp.admin
 {
     public partial class profilguncelle : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=L50A1D2;Initial Catalog=PizzaProject_1;Integrated Security=True");
         MyEntity db = new MyEntity();
         protected void Page_Load(object sender, EventArgs e)
         {

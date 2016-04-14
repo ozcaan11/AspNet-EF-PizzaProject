@@ -6,15 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Pizza_Bootstarp.Entity_Conf;
-using Menu = Pizza_Bootstarp.Entity_Conf.Menu;
+using Pizza_Bootstarp.entities;
+using Menu = Pizza_Bootstarp.entities.Menu;
 
 namespace Pizza_Bootstarp.admin
 {
     public partial class menuduzenle : System.Web.UI.Page
     {
         MyEntity db = new MyEntity();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["admin"] == null)

@@ -210,13 +210,13 @@
     <Compile Include="admin\yorum.aspx.designer.cs">
       <DependentUpon>yorum.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Entity Conf\Admin.cs" />
-    <Compile Include="Entity Conf\Aparat.cs" />
-    <Compile Include="Entity Conf\Kategori.cs" />
-    <Compile Include="Entity Conf\Menu.cs" />
-    <Compile Include="Entity Conf\MyEntity.cs" />
-    <Compile Include="Entity Conf\Uye.cs" />
-    <Compile Include="Entity Conf\Yorum.cs" />
+    <Compile Include="entities\Admin.cs" />
+    <Compile Include="entities\Aparat.cs" />
+    <Compile Include="entities\Kategori.cs" />
+    <Compile Include="entities\Menu.cs" />
+    <Compile Include="entities\MyEntity.cs" />
+    <Compile Include="entities\Uye.cs" />
+    <Compile Include="entities\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="site\anasayfa.aspx.cs">
       <DependentUpon>anasayfa.aspx</DependentUpon>
@@ -281,7 +281,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

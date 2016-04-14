@@ -6,15 +6,13 @@ using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Pizza_Bootstarp.Entity_Conf;
+using Pizza_Bootstarp.entities;
 
 namespace Pizza_Bootstarp.admin
 {
     public partial class uye : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=L50A1D2;Initial Catalog=PizzaProject_1;Integrated Security=True");
         MyEntity db = new MyEntity();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["admin"] == null)
@@ -40,11 +38,6 @@ namespace Pizza_Bootstarp.admin
             var uye = db.Uyes.Remove(db.Uyes.FirstOrDefault(x => x.u_id == cmdArg));
             db.SaveChanges();
             Response.Redirect("uye.aspx");
-        }
-
-        protected void btnYeniUye_OnClick(object sender, EventArgs e)
-        {
-            
         }
 
         protected void btnEkle_OnClick(object sender, EventArgs e)

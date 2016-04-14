@@ -1,4 +1,4 @@
-namespace Pizza_Bootstarp.Entity_Conf
+namespace Pizza_Bootstarp.entities
 {
     using System;
     using System.Data.Entity;
@@ -22,16 +22,6 @@ namespace Pizza_Bootstarp.Entity_Conf
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Menu>()
-                .HasMany(e => e.Aparats)
-                .WithMany(e => e.Menus)
-                .Map(m =>
-                {
-                    m.ToTable("MenuAparat");
-                    m.MapLeftKey("m_id");
-                    m.MapRightKey("a_id");
-                });
-
-            modelBuilder.Entity<Menu>()
                 .HasMany(e => e.Yorums)
                 .WithOptional(e => e.Menu)
                 .WillCascadeOnDelete();
@@ -48,8 +38,6 @@ namespace Pizza_Bootstarp.Entity_Conf
             modelBuilder.Entity<Yorum>()
                 .Property(e => e.y_icerik)
                 .IsUnicode(false);
-
-
         }
     }
 }

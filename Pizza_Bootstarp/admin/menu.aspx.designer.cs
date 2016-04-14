@@ -76,13 +76,13 @@ namespace Pizza_Bootstarp.admin {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListKategori;
         
         /// <summary>
-        /// SqlDataSourceDrp control.
+        /// ListBoxAparat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceDrp;
+        protected global::System.Web.UI.WebControls.ListBox ListBoxAparat;
         
         /// <summary>
         /// btnEkle control.

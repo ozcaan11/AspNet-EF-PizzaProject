@@ -43,7 +43,7 @@
                             <td><%# Eval("u_kayit_tarihi") %></td>
                             <td>
                                 <asp:Button ID="btnSil" runat="server" CommandArgument='<%# Eval("u_kullanici_adi") %>' OnClick="btnSil_OnClick" CssClass="btn btn-danger" Text="Sil" />
-                                <%--<asp:Button ID="btnDuzenle" runat="server" CommandArgument='<%# Eval("u_kullanici_adi") %>' OnClick="btnDuzenle_OnClick" CssClass="btn btn-success" Text="Düzenle" />--%></td>
+                            </td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>

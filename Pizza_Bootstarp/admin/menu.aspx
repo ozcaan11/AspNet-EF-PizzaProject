@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpBody" runat="server">
     <div class="col-md-6" style="margin: 10px 0 20px 5px">
-        <asp:Button ID="btnYeniMenu" CssClass="btn btn-primary" runat="server" Text="Yeni Menü Ekle" data-toggle="modal" data-target="#myModal" OnClientClick="javascript:return false;"  />
+        <asp:Button ID="btnYeniMenu" CssClass="btn btn-primary" runat="server" Text="Yeni Menü Ekle" data-toggle="modal" data-target="#myModal" OnClientClick="javascript:return false;" />
     </div>
     <div class="clearfix"></div>
     <div class="table-responsive">
@@ -74,8 +74,10 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">Kategori</span>
-                        <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server" DataSourceID="SqlDataSourceDrp" DataTextField="k_ad" DataValueField="k_id"></asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSourceDrp" runat="server" ConnectionString="<%$ ConnectionStrings:PizzaProject_1ConnectionString %>" SelectCommand="SELECT * FROM [Kategori]"></asp:SqlDataSource>
+                        <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server" ></asp:DropDownList>
+                    </div>
+                    <div class="input-group">
+                        <asp:ListBox ID="ListBoxAparat" runat="server"></asp:ListBox>
                     </div>
                 </div>
                 <div class="modal-footer">

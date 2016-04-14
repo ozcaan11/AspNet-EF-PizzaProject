@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Pizza_Bootstarp.Entity_Conf;
+using Pizza_Bootstarp.entities;
 
 namespace Pizza_Bootstarp.admin
 {

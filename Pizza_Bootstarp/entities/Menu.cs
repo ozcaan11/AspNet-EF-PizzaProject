@@ -1,4 +1,4 @@
-namespace Pizza_Bootstarp.Entity_Conf
+namespace Pizza_Bootstarp.entities
 {
     using System;
     using System.Collections.Generic;
@@ -39,6 +39,5 @@ namespace Pizza_Bootstarp.Entity_Conf
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yorum> Yorums { get; set; }
-        public IList<Aparat> Aparats { get; set; } 
     }
 }
