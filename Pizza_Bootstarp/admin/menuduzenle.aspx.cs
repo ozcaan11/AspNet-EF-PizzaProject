@@ -24,6 +24,16 @@ namespace Pizza_Bootstarp.admin
             {
                 int id = Convert.ToInt32(Request.QueryString["id"]);
                 var menu = db.Menus.FirstOrDefault(x => x.m_id == id);
+                var kat = (from d in db.Kategoris
+                           orderby d.k_eklenme_tarihi descending
+                           select new
+                           {
+                               k_id = d.k_id,
+                               k_ad = d.k_ad
+                           }).ToList();
+                DropDownListKategori.DataSource = kat;
+                DropDownListKategori.DataTextField = "k_ad";
+                DropDownListKategori.DataValueField = "k_id";
 
                 txtBaslik.Text = menu.m_baslik;
                 txtAciklama.Text = menu.m_aciklama;

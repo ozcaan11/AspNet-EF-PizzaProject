@@ -27,5 +27,6 @@
         <div>
             <asp:Button runat="server" Text="Düzenle" CssClass="btn btn-success" Width="100%" ID="btnDuzenle" OnClick="btnDuzenle_OnClick"/>
         </div>
+        <br />
     </div>
 </asp:Content>

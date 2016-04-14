@@ -24,7 +24,7 @@
                             <th scope="row">
                                 <asp:Label ID="lblCount" runat="server" Text="+"></asp:Label></th>
 
-                            <td><%# Eval("k_ad") %></td>
+                            <td><%# Eval("k_ad").ToString().Length >=30 ? Eval("k_ad").ToString().Substring(0,30)+" ..." : Eval("k_ad").ToString() %></td>
                             <td><%# Eval("k_eklenme_tarihi") %></td>
                             <td>
                                 <asp:Button ID="btnSil" runat="server" OnClick="btnSil_OnClick" CommandArgument='<%# Eval("k_id") %>' CssClass="btn btn-danger" Text="Sil" />

@@ -13,12 +13,21 @@ namespace Pizza_Bootstarp.admin {
     public partial class yorum {
         
         /// <summary>
-        /// rpYorumlar control.
+        /// rpOnayliYorumlar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpYorumlar;
+        protected global::System.Web.UI.WebControls.Repeater rpOnayliYorumlar;
+        
+        /// <summary>
+        /// rpOnaysizYorumlar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rpOnaysizYorumlar;
     }
 }

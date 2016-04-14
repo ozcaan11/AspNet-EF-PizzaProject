@@ -15,6 +15,8 @@ namespace Pizza_Bootstarp.site
         protected void Page_Load(object sender, EventArgs e)
         {
             MultiViewProfil.ActiveViewIndex = Session["kullanici"] != null ? 0 : 1;
+
+            Tarih.Text = DateTime.Today.Year.ToString();
         }
 
         protected void btnGiris_OnClick(object sender, EventArgs e)

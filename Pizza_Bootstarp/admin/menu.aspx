@@ -17,24 +17,23 @@
                     <th>Fiyat</th>
                     <th>EklenmeTarihi</th>
                     <th>Kategori</th>
-                    <th>Aparatlar</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <asp:Repeater ID="rpMenuler" runat="server">
+                <asp:Repeater ID="rpMenuler" OnItemDataBound="rpMenuler_OnItemDataBound" runat="server">
                     <ItemTemplate>
                         <tr>
                             <th scope="row">
                                 <asp:Label ID="lblCount" runat="server" Text="+"></asp:Label></th>
 
                             <td><%# Eval("m_baslik") %></td>
-                            <td><%# Eval("m_aciklama") %></td>
+                            <td><%# Eval("m_aciklama").ToString().Length >= 30 ? Eval("m_aciklama").ToString().Substring(0,30)+" ..." : Eval("m_aciklama") %></td>
                             <td><%# Eval("m_fiyat") %></td>
                             <td><%# Eval("m_eklenme_tarihi") %></td>
-                            <td><%# Eval("k_id") %></td>
                             <td>
-                                <p style="font-style: italic">yapılmadı hala</p>
+                                <asp:Button ID="btn_kat" runat="server" Visible="False" CommandArgument='<%# Eval("k_id") %>' Text="Button" />
+                                <asp:Label ID="lbl_kat" runat="server" Text=""></asp:Label>
                             </td>
                             <td>
                                 <asp:Button ID="btnSil" runat="server" OnClick="btnSil_OnClick" CommandArgument='<%# Eval("m_id") %>' CssClass="btn btn-danger" Text="Sil" />
@@ -74,10 +73,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">Kategori</span>
-                        <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server" ></asp:DropDownList>
-                    </div>
-                    <div class="input-group">
-                        <asp:ListBox ID="ListBoxAparat" runat="server"></asp:ListBox>
+                        <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server"></asp:DropDownList>
                     </div>
                 </div>
                 <div class="modal-footer">

@@ -47,7 +47,6 @@ namespace Pizza_Bootstarp.site
             }
         }
 
-
         private static void ClearTexts(Control Parent)
         {
             if (Parent is TextBox)

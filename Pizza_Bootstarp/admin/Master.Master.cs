@@ -19,6 +19,8 @@ namespace Pizza_Bootstarp.admin
             {
                 MultiView1.ActiveViewIndex = 0;
             }
+
+            Tarih.Text = DateTime.Today.Year.ToString();
         }
 
         protected void btnCikis_OnClick(object sender, EventArgs e)

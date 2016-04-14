@@ -83,6 +83,8 @@
     <Content Include="admin\dist\image\Aparat.png" />
     <Content Include="admin\dist\image\Kategori.png" />
     <Content Include="admin\dist\image\Menu.png" />
+    <Content Include="admin\dist\image\no.png" />
+    <Content Include="admin\dist\image\ok.png" />
     <Content Include="admin\dist\image\Uye.png" />
     <Content Include="admin\dist\image\Yorum.png" />
     <Content Include="admin\dist\js\bootstrap.js" />
@@ -96,6 +98,7 @@
     <Content Include="admin\profilguncelle.aspx" />
     <Content Include="admin\uye.aspx" />
     <Content Include="admin\yorum.aspx" />
+    <Content Include="admin\yorumdetay.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="site\anasayfa.aspx" />
     <Content Include="site\assets\css\carousel.css" />
@@ -209,6 +212,13 @@
     </Compile>
     <Compile Include="admin\yorum.aspx.designer.cs">
       <DependentUpon>yorum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\yorumdetay.aspx.cs">
+      <DependentUpon>yorumdetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\yorumdetay.aspx.designer.cs">
+      <DependentUpon>yorumdetay.aspx</DependentUpon>
     </Compile>
     <Compile Include="entities\Admin.cs" />
     <Compile Include="entities\Aparat.cs" />

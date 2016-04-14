@@ -10,78 +10,69 @@
 namespace Pizza_Bootstarp.admin {
     
     
-    public partial class menu {
+    public partial class yorumdetay {
         
         /// <summary>
-        /// btnYeniMenu control.
+        /// rpYorum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYeniMenu;
+        protected global::System.Web.UI.WebControls.Repeater rpYorum;
         
         /// <summary>
-        /// rpMenuler control.
+        /// btnSil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpMenuler;
+        protected global::System.Web.UI.WebControls.Button btnSil;
         
         /// <summary>
-        /// txtBaslik control.
+        /// MultiView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBaslik;
+        protected global::System.Web.UI.WebControls.MultiView MultiView1;
         
         /// <summary>
-        /// txtAciklama control.
+        /// View1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAciklama;
+        protected global::System.Web.UI.WebControls.View View1;
         
         /// <summary>
-        /// txtFiyat control.
+        /// btnOnayla control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFiyat;
+        protected global::System.Web.UI.WebControls.Button btnOnayla;
         
         /// <summary>
-        /// txtResim control.
+        /// View2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResim;
+        protected global::System.Web.UI.WebControls.View View2;
         
         /// <summary>
-        /// DropDownListKategori control.
+        /// btnOnayKaldir control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListKategori;
-        
-        /// <summary>
-        /// btnEkle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEkle;
+        protected global::System.Web.UI.WebControls.Button btnOnayKaldir;
     }
 }
