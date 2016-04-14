@@ -24,6 +24,9 @@ namespace Pizza_Bootstarp.site
                 where d.u_kullanici_adi == u_adi
                 select d;
 
+            var user = db.Uyes.FirstOrDefault(x => x.u_kullanici_adi == u_adi);
+            image.ImageUrl = user.u_resim;
+
             rpUye.DataSource = usr.ToList();
             rpUye.DataBind();
         }

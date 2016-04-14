@@ -69,7 +69,7 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"></span>
-                        <asp:TextBox ID="txtResim" class="form-control" placeholder="Resim" runat="server"></asp:TextBox>
+                        <asp:FileUpload ID="fuResim" CssClass="form-control" runat="server" />
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">Kategori</span>

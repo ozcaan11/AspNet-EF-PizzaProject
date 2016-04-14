@@ -94,13 +94,13 @@ namespace Pizza_Bootstarp.site {
         protected global::System.Web.UI.WebControls.TextBox txtTelefon;
         
         /// <summary>
-        /// txtResim control.
+        /// fuResim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResim;
+        protected global::System.Web.UI.WebControls.FileUpload fuResim;
         
         /// <summary>
         /// txtAdres control.

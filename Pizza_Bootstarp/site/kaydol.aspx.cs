@@ -34,11 +34,12 @@ namespace Pizza_Bootstarp.site
                 uye.u_ad = txtAd.Text;
                 uye.u_soyad = txtSoyad.Text;
                 uye.u_email = txtEmail.Text;
-                uye.u_resim = txtResim.Text;
                 uye.u_telefon = txtTelefon.Text;
                 uye.u_adres = txtAdres.Text;
                 uye.u_dogum_tarihi = Convert.ToDateTime(txtDt.Text);
                 uye.u_kayit_tarihi = DateTime.Now;
+                fuResim.SaveAs(Server.MapPath("~/files/images/user_images/" + uye.u_kullanici_adi  + "-" + fuResim.FileName));
+                uye.u_resim = "~/files/images/user_images/" + uye.u_kullanici_adi + "-" + uye.u_kayit_tarihi + "-" + fuResim.FileName;
                 db.Uyes.Add(uye);
                 db.SaveChanges();
                 Session["kullanici"] = txtKullaniciAdi.Text;

@@ -38,6 +38,7 @@ namespace Pizza_Bootstarp.admin
                 txtBaslik.Text = menu.m_baslik;
                 txtAciklama.Text = menu.m_aciklama;
                 txtFiyat.Text = menu.m_fiyat.ToString();
+                image.ImageUrl = menu.m_resim;
                 DropDownListKategori.DataBind();
             }
         }
@@ -62,6 +63,8 @@ namespace Pizza_Bootstarp.admin
             menu.m_eklenme_tarihi = mn.eklenme;
             menu.m_degistirilme_tarihi = DateTime.Now;
             menu.k_id = Convert.ToInt32(DropDownListKategori.SelectedItem.Value);
+            fuResim.SaveAs(Server.MapPath("~/files/images/menu_images/" + menu.m_baslik +"-" +menu.m_fiyat+ "-" + fuResim.FileName));
+            menu.m_resim = "~/files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName;
             db.Menus.AddOrUpdate(menu);
             db.SaveChanges();
             Response.Redirect("menu.aspx");

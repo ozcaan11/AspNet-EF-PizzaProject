@@ -131,6 +131,9 @@
                 </asp:ContentPlaceHolder>
             </div>
             <!-- FOOTER -->
+            <br />
+            <br />
+            <hr />
             <footer>
                 <p class="pull-right"><a href="#">Back to top</a></p>
                 <p>&copy; <asp:Label ID="Tarih" runat="server" Text=""></asp:Label> Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>

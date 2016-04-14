@@ -13,6 +13,15 @@ namespace Pizza_Bootstarp.admin {
     public partial class menuduzenle {
         
         /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image;
+        
+        /// <summary>
         /// txtBaslik control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,13 @@ namespace Pizza_Bootstarp.admin {
         protected global::System.Web.UI.WebControls.TextBox txtFiyat;
         
         /// <summary>
-        /// txtResim control.
+        /// fuResim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResim;
+        protected global::System.Web.UI.WebControls.FileUpload fuResim;
         
         /// <summary>
         /// DropDownListKategori control.

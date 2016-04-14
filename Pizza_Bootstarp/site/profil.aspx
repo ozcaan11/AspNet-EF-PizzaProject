@@ -7,6 +7,9 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cpBody" runat="server">
     <div class="row">
         <div class="col-sm-6">
+            <asp:Image ID="image" Width="270" Height="270" CssClass="img-responsive" runat="server" />
+        </div>
+        <div class="col-sm-6">
             <table class="table">
                 <caption style="color: #FF0000">Sadece kullanıcı adı ve şifrenizi değiştirebilirsiniz.</caption>
                 <thead>
@@ -55,5 +58,6 @@
             </div>
             <hr />
         </div>
+
     </div>
 </asp:Content>
