@@ -12,7 +12,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="dist/image/1.jpg" />
+                <img class="first-slide" src="image/1.jpg" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Example headline.</h1>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="dist/image/2.jpg" alt="Second slide" />
+                <img class="second-slide" src="image/2.jpg" alt="Second slide" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Another example headline.</h1>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="item">
-                <img class="third-slide" src="dist/image/3.jpg" alt="Third slide" />
+                <img class="third-slide" src="image/3.jpg" alt="Third slide" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>One more for good measure.</h1>
@@ -62,8 +62,11 @@
                     <asp:Image ID="img" class="img-circle" src='<%# Eval("m_resim") %>' alt="Generic placeholder image" Width="140" Height="140" runat="server" />
                     <%--<img class="img-circle" src="<%# Eval("m_resim") %>" alt="Generic placeholder image" width="140" height="140" />--%>
                     <h2><%# Eval("m_baslik").ToString().Length >= 30 ? Eval("m_baslik").ToString().Substring(0,30) : Eval("m_baslik") %></h2>
-                    <p><%# Eval("m_aciklama").ToString().Length >= 350 ? Eval("m_aciklama").ToString().Substring(0,350) + " ..." : Eval("m_aciklama") %></p>
-                    <p><a class="btn btn-info" href="#" role="button">İncele &raquo;</a></p>
+                    <p><%# Eval("m_aciklama").ToString().Length >= 300 ? Eval("m_aciklama").ToString().Substring(0,300) + " ..." : Eval("m_aciklama") %></p>
+                    <p>
+                        <asp:Button ID="btnIncele" CssClass="btn btn-success" runat="server" Text="İncele" CommandArgument='<%# Eval("m_id") %>' OnClick="btnIncele_OnClick" />
+                        <asp:Button ID="btnYorum" CssClass="btn btn-info" runat="server" Text="Yorum Yap" CommandArgument='<%# Eval("m_id") %>' OnClick="btnYorum_OnClick" />
+                    </p>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -82,7 +85,7 @@
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="dist/image/p1.jpg" alt="Generic placeholder image" />
+            <img class="featurette-image img-responsive center-block" src="image/p1.jpg" alt="Generic placeholder image" />
         </div>
     </div>
 
@@ -94,7 +97,7 @@
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" src="dist/image/p2.jpg" alt="Generic placeholder image" />
+            <img class="featurette-image img-responsive center-block" src="image/p2.jpg" alt="Generic placeholder image" />
         </div>
     </div>
 
@@ -106,7 +109,7 @@
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="dist/image/p3.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-responsive center-block" src="image/p3.jpg" alt="Generic placeholder image">
         </div>
     </div>
 

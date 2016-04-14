@@ -38,7 +38,7 @@
                                 <asp:Label ID="lbl_menu" runat="server" Text=""></asp:Label>
                             </td>
                             <td>
-                                <img src="dist/image/ok.png" />
+                                <img src="image/ok.png" />
                             </td>
                             <td>
                                 <asp:Button ID="btnSil" runat="server" OnClick="btnSil_OnClick" CommandArgument='<%# Eval("y_id") %>' CssClass="btn btn-danger" Text="Sil" Width="50" />
@@ -83,7 +83,7 @@
                                 <asp:Button ID="btn_menu" runat="server" Text="Button" Visible="False" CommandArgument='<%# Eval("m_id") %>' />
                                 <asp:Label ID="lbl_menu" runat="server" Text=""></asp:Label></td>
                             <td>
-                                <img src="dist/image/no.png" />
+                                <img src="image/no.png" />
                             </td>
                             <td>
                                 <asp:Button ID="btnSil" runat="server" OnClick="btnSil_OnClick" CommandArgument='<%# Eval("y_id") %>' CssClass="btn btn-danger" Text="Sil" Width="50" />

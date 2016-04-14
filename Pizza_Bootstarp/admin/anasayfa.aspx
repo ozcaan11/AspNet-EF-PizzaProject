@@ -6,27 +6,27 @@
     <div class="row">
         <div class="col-sm-4 col-md-2">
             <a href="menu.aspx">
-            <img src="dist/image/Menu.png" /></a>
+            <img src="image/Menu.png" /></a>
         </div>
         <hr />
         <div class="col-sm-4 col-md-2">
             <a href="kategori.aspx">
-            <img src="dist/image/Kategori.png" /></a>
+            <img src="image/Kategori.png" /></a>
         </div>
         <hr />
         <div class="col-sm-4 col-md-2">
             <a href="aparat.aspx">
-            <img src="dist/image/Aparat.png" /></a>
+            <img src="image/Aparat.png" /></a>
         </div>
         <hr />
         <div class="col-sm-4 col-md-2">
             <a href="uye.aspx">
-            <img src="dist/image/Uye.png" /></a>
+            <img src="image/Uye.png" /></a>
         </div>
         <hr />
         <div class="col-sm-4 col-md-2">
             <a href="yorum.aspx">
-            <img src="dist/image/Yorum.png" /></a>
+            <img src="image/Yorum.png" /></a>
         </div>
         <hr />
     </div>

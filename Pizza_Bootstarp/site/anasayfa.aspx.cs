@@ -17,7 +17,27 @@ namespace Pizza_Bootstarp.site
                 orderby d.m_eklenme_tarihi descending 
                 select d;
             rpSliderAlti.DataSource = menu.ToList();
-            rpSliderAlti.DataBind();
+            if (!IsPostBack)
+            {
+                rpSliderAlti.DataBind();
+            }
+        }
+
+        protected void btnIncele_OnClick(object sender, EventArgs e)
+        {
+            Button btn = (Button) sender;
+            int id = Convert.ToInt32(btn.CommandArgument);
+
+        }
+
+        protected void btnYorum_OnClick(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int id = Convert.ToInt32(btn.CommandArgument);
+            if (Session["kullanici"]==null)
+            {
+            Response.Redirect("giris.aspx");
+            }
         }
     }
 }

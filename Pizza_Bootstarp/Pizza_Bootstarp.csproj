@@ -70,26 +70,18 @@
     <Content Include="admin\anasayfa.aspx" />
     <Content Include="admin\aparat.aspx" />
     <Content Include="admin\aparatduzenle.aspx" />
-    <Content Include="admin\assets\css\carousel.css" />
-    <Content Include="admin\assets\css\ie10-viewport-bug-workaround.css" />
-    <Content Include="admin\assets\js\ie-emulation-modes-warning.js" />
-    <Content Include="admin\assets\js\ie10-viewport-bug-workaround.js" />
-    <Content Include="admin\assets\js\jquery-1.12.3.min.js" />
-    <Content Include="admin\dist\css\bootstrap-theme.css" />
-    <Content Include="admin\dist\css\bootstrap-theme.min.css" />
-    <Content Include="admin\dist\css\bootstrap.css" />
-    <Content Include="admin\dist\css\bootstrap.min.css" />
-    <Content Include="admin\dist\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="admin\dist\image\Aparat.png" />
-    <Content Include="admin\dist\image\Kategori.png" />
-    <Content Include="admin\dist\image\Menu.png" />
-    <Content Include="admin\dist\image\no.png" />
-    <Content Include="admin\dist\image\ok.png" />
-    <Content Include="admin\dist\image\Uye.png" />
-    <Content Include="admin\dist\image\Yorum.png" />
-    <Content Include="admin\dist\js\bootstrap.js" />
-    <Content Include="admin\dist\js\bootstrap.min.js" />
-    <Content Include="admin\dist\js\npm.js" />
+    <Content Include="Content\carousel.css" />
+    <Content Include="Content\ie10-viewport-bug-workaround.css" />
+    <Content Include="Scripts\ie-emulation-modes-warning.js" />
+    <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
+    <Content Include="admin\image\Aparat.png" />
+    <Content Include="admin\image\Kategori.png" />
+    <Content Include="admin\image\Menu.png" />
+    <Content Include="admin\image\no.png" />
+    <Content Include="admin\image\ok.png" />
+    <Content Include="admin\image\Uye.png" />
+    <Content Include="admin\image\Yorum.png" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="admin\kategori.aspx" />
     <Content Include="admin\kategoriduzenle.aspx" />
     <Content Include="admin\menu.aspx" />
@@ -99,30 +91,36 @@
     <Content Include="admin\uye.aspx" />
     <Content Include="admin\yorum.aspx" />
     <Content Include="admin\yorumdetay.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-2.2.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-2.2.3.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
     <Content Include="site\anasayfa.aspx" />
-    <Content Include="site\assets\css\carousel.css" />
-    <Content Include="site\assets\css\ie10-viewport-bug-workaround.css" />
-    <Content Include="site\assets\js\ie-emulation-modes-warning.js" />
-    <Content Include="site\assets\js\ie10-viewport-bug-workaround.js" />
-    <Content Include="site\assets\js\jquery-1.12.3.min.js" />
-    <Content Include="site\dist\css\bootstrap-theme.css" />
-    <Content Include="site\dist\css\bootstrap-theme.min.css" />
-    <Content Include="site\dist\css\bootstrap.css" />
-    <Content Include="site\dist\css\bootstrap.min.css" />
-    <Content Include="site\dist\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="site\dist\image\1.jpg" />
-    <Content Include="site\dist\image\2.jpg" />
-    <Content Include="site\dist\image\3.jpg" />
-    <Content Include="site\dist\image\p1.jpg" />
-    <Content Include="site\dist\image\p2.jpg" />
-    <Content Include="site\dist\image\p3.jpg" />
-    <Content Include="site\dist\image\y_1.jpg" />
-    <Content Include="site\dist\image\y_2.jpg" />
-    <Content Include="site\dist\image\y_3.jpg" />
-    <Content Include="site\dist\js\bootstrap.js" />
-    <Content Include="site\dist\js\bootstrap.min.js" />
-    <Content Include="site\dist\js\npm.js" />
+    <Content Include="site\giris.aspx" />
+    <Content Include="site\image\1.jpg" />
+    <Content Include="site\image\2.jpg" />
+    <Content Include="site\image\3.jpg" />
+    <Content Include="site\image\p1.jpg" />
+    <Content Include="site\image\p2.jpg" />
+    <Content Include="site\image\p3.jpg" />
+    <Content Include="site\image\y_1.jpg" />
+    <Content Include="site\image\y_2.jpg" />
+    <Content Include="site\image\y_3.jpg" />
     <Content Include="site\kaydol.aspx" />
     <Content Include="site\profil.aspx" />
     <Content Include="site\profilguncelle.aspx" />
@@ -235,6 +233,13 @@
     <Compile Include="site\anasayfa.aspx.designer.cs">
       <DependentUpon>anasayfa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="site\giris.aspx.cs">
+      <DependentUpon>giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\giris.aspx.designer.cs">
+      <DependentUpon>giris.aspx</DependentUpon>
+    </Compile>
     <Compile Include="site\kaydol.aspx.cs">
       <DependentUpon>kaydol.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,24 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="site\Master.Master" />
-    <Content Include="site\dist\css\bootstrap-theme.css.map" />
-    <Content Include="site\dist\css\bootstrap-theme.min.css.map" />
-    <Content Include="site\dist\css\bootstrap.css.map" />
-    <Content Include="site\dist\css\bootstrap.min.css.map" />
-    <Content Include="site\dist\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="site\dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="site\dist\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="site\dist\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="admin\Master.Master" />
-    <Content Include="admin\dist\css\bootstrap-theme.css.map" />
-    <Content Include="admin\dist\css\bootstrap-theme.min.css.map" />
-    <Content Include="admin\dist\css\bootstrap.css.map" />
-    <Content Include="admin\dist\css\bootstrap.min.css.map" />
-    <Content Include="admin\dist\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="admin\dist\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="admin\dist\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="admin\dist\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-2.2.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
