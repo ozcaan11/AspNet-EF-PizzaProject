@@ -27,7 +27,7 @@ namespace Pizza_Bootstarp.admin
             rpMenuler.DataSource = data.ToList();
 
             var kat = (from d in db.Kategoris
-                       orderby d.k_eklenme_tarihi descending
+                       orderby d.k_eklenme_tarihi descending 
                        select new
                        {
                            k_id = d.k_id,
@@ -78,8 +78,8 @@ namespace Pizza_Bootstarp.admin
             menu.m_fiyat = Convert.ToDouble(txtFiyat.Text);
             menu.m_eklenme_tarihi = DateTime.Now;
             menu.m_degistirilme_tarihi = DateTime.Now;
-            fuResim.SaveAs(Server.MapPath("~/files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName));
-            menu.m_resim = "~/files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName;
+            fuResim.SaveAs(Server.MapPath("../files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName));
+            menu.m_resim = "../files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName;
             menu.k_id = Convert.ToInt32(DropDownListKategori.SelectedItem.Value);
             db.Menus.Add(menu);
             db.SaveChanges();

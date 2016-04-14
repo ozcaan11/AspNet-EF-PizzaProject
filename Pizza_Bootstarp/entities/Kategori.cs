@@ -18,7 +18,7 @@ namespace Pizza_Bootstarp.entities
         [Key]
         public int k_id { get; set; }
 
-        [StringLength(150)]
+        [StringLength(250)]
         public string k_ad { get; set; }
 
         public DateTime? k_eklenme_tarihi { get; set; }

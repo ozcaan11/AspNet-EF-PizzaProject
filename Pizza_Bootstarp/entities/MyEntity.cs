@@ -27,17 +27,9 @@ namespace Pizza_Bootstarp.entities
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<Uye>()
-                .Property(e => e.u_adres)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Uye>()
                 .HasMany(e => e.Yorums)
                 .WithOptional(e => e.Uye)
                 .WillCascadeOnDelete();
-
-            modelBuilder.Entity<Yorum>()
-                .Property(e => e.y_icerik)
-                .IsUnicode(false);
         }
     }
 }

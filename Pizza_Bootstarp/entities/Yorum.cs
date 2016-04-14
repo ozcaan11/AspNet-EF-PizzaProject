@@ -12,7 +12,7 @@ namespace Pizza_Bootstarp.entities
         [Key]
         public int y_id { get; set; }
 
-        [Column(TypeName = "text")]
+        [Column(TypeName = "ntext")]
         public string y_icerik { get; set; }
 
         public bool? y_onay { get; set; }

@@ -12,7 +12,7 @@ namespace Pizza_Bootstarp.entities
         [Key]
         public int a_id { get; set; }
 
-        [StringLength(150)]
+        [StringLength(250)]
         public string a_ad { get; set; }
 
         public DateTime? a_degistirlme_tarihi { get; set; }

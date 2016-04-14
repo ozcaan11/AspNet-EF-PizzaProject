@@ -18,7 +18,7 @@ namespace Pizza_Bootstarp.entities
         [Key]
         public int u_id { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string u_kullanici_adi { get; set; }
 
         [StringLength(100)]
@@ -33,12 +33,12 @@ namespace Pizza_Bootstarp.entities
         [StringLength(150)]
         public string u_email { get; set; }
 
-        [StringLength(100)]
+        [StringLength(250)]
         public string u_resim { get; set; }
 
         public DateTime? u_dogum_tarihi { get; set; }
 
-        [Column(TypeName = "text")]
+        [Column(TypeName = "ntext")]
         public string u_adres { get; set; }
 
         [StringLength(50)]

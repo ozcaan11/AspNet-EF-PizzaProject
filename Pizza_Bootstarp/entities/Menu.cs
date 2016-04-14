@@ -18,15 +18,15 @@ namespace Pizza_Bootstarp.entities
         [Key]
         public int m_id { get; set; }
 
-        [StringLength(100)]
+        [StringLength(500)]
         public string m_baslik { get; set; }
 
-        [StringLength(250)]
+        [Column(TypeName = "ntext")]
         public string m_aciklama { get; set; }
 
         public double? m_fiyat { get; set; }
 
-        [StringLength(100)]
+        [StringLength(500)]
         public string m_resim { get; set; }
 
         public DateTime? m_eklenme_tarihi { get; set; }
