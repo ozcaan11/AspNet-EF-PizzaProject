@@ -118,7 +118,7 @@
             <div class="row">
                 <asp:MultiView ID="MultiView1" runat="server">
                     <asp:View ID="ViewFail" runat="server">
-                        <div class="alert alert-warning alert-dismissible" role="alert">
+                        <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Kapat"><span aria-hidden="true">&times;</span></button>
                             <strong>Dikkat!</strong> Giriş yapmadınız!
                         </div>

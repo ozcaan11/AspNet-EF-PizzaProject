@@ -23,12 +23,19 @@ namespace Pizza_Bootstarp.site
             var aparat = from d in db.Aparats
                 select d;
             rpAparatlar.DataSource = aparat.ToList();
-            
 
+            var yorum = from d in db.Yorums
+                orderby d.y_yapma_tarihi descending
+                where d.m_id == id
+                where d.y_onay == true
+                select d;
+            rpYorumlar.DataSource = yorum.ToList();
+            
             if (!IsPostBack)
             {
                 rpMenu.DataBind();
                 rpAparatlar.DataBind();
+                rpYorumlar.DataBind();
             }
 
         }
@@ -46,6 +53,54 @@ namespace Pizza_Bootstarp.site
             catch (Exception)
             {
                 lbl.Text = "Kategori bulunamadı!";
+            }
+        }
+
+        protected void btnGonder_OnClick(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            if (Session["kullanici"] != null)
+            {
+                string k_adi = Session["kullanici"].ToString();
+                var user = db.Uyes.FirstOrDefault(x => x.u_kullanici_adi == k_adi);
+                if (user != null)
+                {
+                    Yorum yorum = new Yorum
+                    {
+                        y_icerik = txtYorum.Text,
+                        y_yapma_tarihi = DateTime.Now,
+                        y_onay = false,
+                        m_id = id,
+                        u_id = user.u_id
+                    };
+                    db.Yorums.Add(yorum);
+                    db.SaveChanges();
+                    txtYorum.Text = "";
+                    MultiView1.ActiveViewIndex = 0;
+                }
+
+            }
+            else
+            {
+                MultiView1.ActiveViewIndex = 1;
+            }
+        }
+
+        protected void rpYorumlar_OnItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            Button btnUye = (Button) e.Item.FindControl("btn_uye");
+            Label lblUye = (Label) e.Item.FindControl("lbl_uye");
+            Image img = (Image) e.Item.FindControl("image");
+            try
+            {
+                int uy_id = Convert.ToInt32(btnUye.CommandArgument);
+                var uye = db.Uyes.FirstOrDefault(x => x.u_id == uy_id);
+                lblUye.Text = uye.u_kullanici_adi;
+                img.ImageUrl = uye.u_resim;
+            }
+            catch (Exception)
+            {
+                lblUye.Text = "Anonim";
             }
         }
     }

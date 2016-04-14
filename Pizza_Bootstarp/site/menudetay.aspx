@@ -11,7 +11,7 @@
             <caption></caption>
             <thead>
                 <tr>
-                    <th><span class="glyphicon glyphicon-align-left"></span>  Aparatlar</th>
+                    <th><span class="glyphicon glyphicon-align-left"></span>Aparatlar</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +35,7 @@
             <caption></caption>
             <thead>
                 <tr>
-                    <th><span class="glyphicon glyphicon-cutlery"></span>  Menü Bilgileri</th>
+                    <th><span class="glyphicon glyphicon-cutlery"></span>Menü Bilgileri</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,12 +63,54 @@
                 </asp:Repeater>
             </tbody>
         </table>
-    </div>
-    <div class="clearfix">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <h3>Yorum Bölümü</h3>
+            <hr />
+            <asp:Repeater ID="rpYorumlar" runat="server" OnItemDataBound="rpYorumlar_OnItemDataBound">
+                <ItemTemplate>
+                    <div class="col-sm-2">
+                        <asp:Image ID="image" Width="100%" Height="100%" runat="server" />
+                    </div>
+                    <div class="col-sm-10">
+                        <h5>
+                            <asp:Button ID="btn_uye" Visible="False" CommandArgument='<%# Eval("u_id") %>' runat="server" Text="Button" />
+                            <strong>
+                                <asp:Label ID="lbl_uye" runat="server" Text=""></asp:Label></strong>
+                            <span><small><%# Eval("y_yapma_tarihi") %></small></span></h5>
+                        <p><%# Eval("y_icerik") %></p>
+                        <br />
+                    </div>
+                    <div class="clearfix"></div>
+                </ItemTemplate>
+            </asp:Repeater>
+
+            <hr />
+            <asp:MultiView ID="MultiView1" runat="server">
+                <asp:View ID="View1" runat="server">
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Teşekkürler! </strong>Yorumunuzun yayınlanması için adminimiz tarafından onaylanması lazım .
+                    </div>
+                </asp:View>
+                <asp:View ID="View2" runat="server">
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>Dikkat! </strong> Yorum yapabilmek için giriş yapınız .
+                    </div>
+                </asp:View>
+            </asp:MultiView>
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <asp:TextBox ID="txtYorum" CssClass="form-control" placeholder="Yorumunuz..." Height="120" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <asp:Button ID="btnGonder" runat="server" Text="Gönder" Height="40" Width="100%" CssClass="btn btn-success" OnClick="btnGonder_OnClick" />
+            </div>
+            <hr />
         </div>
     </div>
+
     <br />
     <br />
     <hr />

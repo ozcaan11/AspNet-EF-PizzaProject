@@ -16,7 +16,7 @@
                     <div class="col-md-7">
                         <h2 class="featurette-heading"><%# Eval("m_baslik") %></h2>
                         <h6><%# Eval("m_eklenme_tarihi").ToString() %></h6>
-                        <p class="lead"><%# Eval("m_aciklama").ToString().Length >= 120 ? Eval("m_aciklama").ToString().Substring(0,120) + " ..." : Eval("m_aciklama") %></p>
+                        <p class="lead"><%# Eval("m_aciklama").ToString().Length >= 250 ? Eval("m_aciklama").ToString().Substring(0,250) + " ..." : Eval("m_aciklama") %></p>
                         <br />
                         <asp:Button ID="btnDetay" CssClass="btn btn-info" CommandArgument='<%# Eval("m_id") %>' runat="server" Text="Detay için .."  OnClick="btnDetay_OnClick"/>
                     </div>

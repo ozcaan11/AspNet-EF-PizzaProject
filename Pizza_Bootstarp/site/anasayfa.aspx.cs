@@ -32,15 +32,9 @@ namespace Pizza_Bootstarp.site
 
         protected void btnYorum_OnClick(object sender, EventArgs e)
         {
-            if (Session["kullanici"] == null)
-            {
-                Response.Redirect("giris.aspx");
-            }
-            else
-            {
-                Button btn = (Button)sender;
-                int id = Convert.ToInt32(btn.CommandArgument);
-            }
+            Button btn = (Button)sender;
+            int id = Convert.ToInt32(btn.CommandArgument);
+            Response.Redirect("menudetay.aspx?id=" + id + "");
         }
     }
 }

@@ -70,6 +70,8 @@
     <Content Include="admin\anasayfa.aspx" />
     <Content Include="admin\aparat.aspx" />
     <Content Include="admin\aparatduzenle.aspx" />
+    <Content Include="site\hakkinda.aspx" />
+    <Content Include="site\iletisim.aspx" />
     <Content Include="Content\carousel.css" />
     <Content Include="Content\ie10-viewport-bug-workaround.css" />
     <Content Include="Scripts\ie-emulation-modes-warning.js" />
@@ -144,6 +146,20 @@
     </Compile>
     <Compile Include="admin\aparatduzenle.aspx.designer.cs">
       <DependentUpon>aparatduzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\hakkinda.aspx.cs">
+      <DependentUpon>hakkinda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\hakkinda.aspx.designer.cs">
+      <DependentUpon>hakkinda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\kategori.aspx.cs">
       <DependentUpon>kategori.aspx</DependentUpon>
@@ -225,6 +241,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="site\anasayfa.aspx.cs">
       <DependentUpon>anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\anasayfa.aspx.designer.cs">
       <DependentUpon>anasayfa.aspx</DependentUpon>
@@ -243,12 +260,14 @@
     </Compile>
     <Compile Include="site\Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="site\menudetay.aspx.cs">
       <DependentUpon>menudetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\menudetay.aspx.designer.cs">
       <DependentUpon>menudetay.aspx</DependentUpon>

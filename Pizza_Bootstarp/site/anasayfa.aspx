@@ -16,8 +16,8 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Example headline.</h1>
-                        <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat molestie lorem sed blandit. Suspendisse nec eros nec urna placerat varius. Sed sed diam consectetur, maximus ligula suscipit, tincidunt ipsum. </p>
+                        <p><a class="btn btn-lg btn-primary" href="kaydol.aspx" role="button">Sign up today</a></p>
                     </div>
                 </div>
             </div>
@@ -26,8 +26,8 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        <p>Etiam et leo imperdiet, egestas risus a, fermentum massa. Nunc sit amet erat quis lorem cursus faucibus. Proin nisl erat, hendrerit mollis neque vitae, tempus malesuada ante</p>
+                        <p><a class="btn btn-lg btn-primary" href="menuler.aspx" role="button">Learn more</a></p>
                     </div>
                 </div>
             </div>
@@ -36,8 +36,8 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        <p>Vestibulum pharetra vulputate ante, placerat luctus metus venenatis ut. Integer vitae tellus pellentesque, fringilla tellus vitae, tristique orci. Nullam non elit in felis faucibus vulputate</p>
+                        <p><a class="btn btn-lg btn-primary" href="giris.aspx" role="button">Sign In</a></p>
                     </div>
                 </div>
             </div>
