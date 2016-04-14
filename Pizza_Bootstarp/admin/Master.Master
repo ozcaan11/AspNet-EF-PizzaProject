@@ -59,13 +59,13 @@
                         <li><a href="aparat.aspx">Aparatlar</a></li>
                         <li><a href="uye.aspx">Üyeler</a></li>
                         <li><a href="yorum.aspx">Yorumlar</a></li>
-                        <li><a href="../../site/anasayfa.aspx" >Siteye Git</a></li>
+                        <li><a href="../../site/anasayfa.aspx" target="_blank" >Siteye Git</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <asp:MultiView ID="MultiViewProfil" runat="server">
                             <asp:View ID="View1" runat="server">
-                                <li><a href="profil.aspx">Profil</a></li>
+                                <li><a href="profil.aspx"><span class="glyphicon glyphicon-user"></span>   Profil</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Çıkış Yap <span class="caret"></span></a>
                                     <ul class="dropdown-menu">

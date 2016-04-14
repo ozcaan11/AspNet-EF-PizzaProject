@@ -56,7 +56,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="anasayfa.aspx">Anasayfa</a></li>
-                        <li><a href="#">Menüler</a></li>
+                        <li><a href="menuler.aspx">Menüler</a></li>
                         <li><a href="#">Hakkında</a></li>
                         <li><a href="#">İletişim</a></li>
                     </ul>
@@ -64,7 +64,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <asp:MultiView ID="MultiViewProfil" runat="server">
                             <asp:View ID="View1" runat="server">
-                                <li><a href="profil.aspx">Profil</a></li>
+                                <li><a href="profil.aspx"><span class="glyphicon glyphicon-user"></span>Profil</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Çıkış Yap <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -74,6 +74,8 @@
                                                 <asp:Button ID="btnCikis" CssClass="btn btn-danger btn-sm" runat="server" Width="100%" Text="Çıkış Yap" OnClick="btnCikis_OnClick" />
                                             </p>
                                         </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="../admin/anasayfa.aspx" target="_blank"><span class="glyphicon glyphicon-cog"></span>Admin Paneli</a></li>
                                     </ul>
                                 </li>
                             </asp:View>
@@ -104,7 +106,8 @@
                                                 <asp:Button ID="btnKaydol" CssClass="btn btn-primary btn-sm" runat="server" Width="100%" Text="Kaydol" OnClick="btnKaydol_OnClick" />
                                             </p>
                                         </li>
-
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="../admin/anasayfa.aspx" target="_blank"><span class="glyphicon glyphicon-cog"></span>Admin Paneli</a></li>
                                     </ul>
                                 </li>
                             </asp:View>
@@ -252,7 +255,11 @@
             <!-- FOOTER -->
             <footer>
                 <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; <asp:Label ID="Tarih" runat="server" Text=""></asp:Label> Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <p>
+                    &copy;
+                    <asp:Label ID="Tarih" runat="server" Text=""></asp:Label>
+                    Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+                </p>
             </footer>
 
         </div>

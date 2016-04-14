@@ -10,17 +10,21 @@
         <div class="col-sm-6">
             <br />
             <div class="input-group">
-                    <span class="input-group-addon"></span>
-                    <asp:TextBox ID="txtKullaniciAdi" CssClass="form-control" placeholder="Kullanıcı adı" runat="server"></asp:TextBox>
-                </div>
-                <div class="input-group">
-                    <span class="input-group-addon"></span>
-                    <asp:TextBox ID="txtSifre" CssClass="form-control" placeholder="Şifre" runat="server" TextMode="Password"></asp:TextBox>
-                </div>
-                <br />
-                <div>
-                    <asp:Button ID="btnGiris" runat="server" Text="Giriş Yap" Height="40" Width="100%" CssClass="btn btn-success" OnClick="btnGiris_OnClick" />
-                </div>
+                <span class="input-group-addon"></span>
+                <asp:TextBox ID="txtKullaniciAdi" CssClass="form-control" placeholder="Kullanıcı adı" runat="server"></asp:TextBox>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"></span>
+                <asp:TextBox ID="txtSifre" CssClass="form-control" placeholder="Şifre" runat="server" TextMode="Password"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <asp:Button ID="btnGiris" runat="server" Text="Giriş Yap" Height="40" Width="100%" CssClass="btn btn-success" OnClick="btnGiris_OnClick" />
+            </div>
         </div>
     </div>
+    
+    <br />
+    <br />
+    <hr />
 </asp:Content>

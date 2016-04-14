@@ -7,54 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pizza_Bootstarp.admin {
+namespace Pizza_Bootstarp.site {
     
     
-    public partial class anasayfa {
+    public partial class menudetay {
         
         /// <summary>
-        /// lblMenu control.
+        /// resim control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMenu;
+        protected global::System.Web.UI.WebControls.Image resim;
         
         /// <summary>
-        /// lblKat control.
+        /// rpAparatlar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblKat;
+        protected global::System.Web.UI.WebControls.Repeater rpAparatlar;
         
         /// <summary>
-        /// lblApa control.
+        /// rpMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblApa;
-        
-        /// <summary>
-        /// lblUye control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUye;
-        
-        /// <summary>
-        /// lblYor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblYor;
+        protected global::System.Web.UI.WebControls.Repeater rpMenu;
     }
 }

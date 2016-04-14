@@ -27,16 +27,19 @@ namespace Pizza_Bootstarp.site
         {
             Button btn = (Button) sender;
             int id = Convert.ToInt32(btn.CommandArgument);
-
+            Response.Redirect("menudetay.aspx?id="+id+"");
         }
 
         protected void btnYorum_OnClick(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            int id = Convert.ToInt32(btn.CommandArgument);
-            if (Session["kullanici"]==null)
+            if (Session["kullanici"] == null)
             {
-            Response.Redirect("giris.aspx");
+                Response.Redirect("giris.aspx");
+            }
+            else
+            {
+                Button btn = (Button)sender;
+                int id = Convert.ToInt32(btn.CommandArgument);
             }
         }
     }

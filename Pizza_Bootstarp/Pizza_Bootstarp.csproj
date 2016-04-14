@@ -122,6 +122,8 @@
     <Content Include="site\image\y_2.jpg" />
     <Content Include="site\image\y_3.jpg" />
     <Content Include="site\kaydol.aspx" />
+    <Content Include="site\menudetay.aspx" />
+    <Content Include="site\menuler.aspx" />
     <Content Include="site\profil.aspx" />
     <Content Include="site\profilguncelle.aspx" />
     <Content Include="Web.config" />
@@ -253,6 +255,20 @@
     </Compile>
     <Compile Include="site\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="site\menudetay.aspx.cs">
+      <DependentUpon>menudetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\menudetay.aspx.designer.cs">
+      <DependentUpon>menudetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="site\menuler.aspx.cs">
+      <DependentUpon>menuler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site\menuler.aspx.designer.cs">
+      <DependentUpon>menuler.aspx</DependentUpon>
     </Compile>
     <Compile Include="site\profil.aspx.cs">
       <DependentUpon>profil.aspx</DependentUpon>
