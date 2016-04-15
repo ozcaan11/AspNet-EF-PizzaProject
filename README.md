@@ -7,7 +7,7 @@
 | Asp.net 
 ---- 
 
-| Entityframework
+| Entityframework (Sql Server 2012)
 ----
 
 ---------------
