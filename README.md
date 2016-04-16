@@ -1,5 +1,9 @@
 ###Online pizza satış sitesi
 --------------
+
+Detaylı bilgi için [wiki](../../wiki)
+
+
 ##### Kullanılan Araçlar
 
 | Microsoft Visual Studio - 2013
