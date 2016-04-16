@@ -7,23 +7,22 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cpBody" runat="server">
     <div class="row">
         <br />
-        <h2>Menüler</h2>
         <!-- START THE FEATURETTES -->
         <asp:Repeater ID="rpMenuler" runat="server">
             <ItemTemplate>
-                <hr class="featurette-divider" />
                 <div class="row featurette">
                     <div class="col-md-7">
                         <h2 class="featurette-heading"><%# Eval("m_baslik") %></h2>
                         <h6><%# Eval("m_eklenme_tarihi").ToString() %></h6>
                         <p class="lead"><%# Eval("m_aciklama").ToString().Length >= 250 ? Eval("m_aciklama").ToString().Substring(0,250) + " ..." : Eval("m_aciklama") %></p>
                         <br />
-                        <asp:Button ID="btnDetay" CssClass="btn btn-info" CommandArgument='<%# Eval("m_id") %>' runat="server" Text="Detay için .."  OnClick="btnDetay_OnClick"/>
+                        <asp:Button ID="btnDetay" CssClass="btn btn-info" CommandArgument='<%# Eval("m_id") %>' runat="server" Text="Detay için tıklayın ..."  OnClick="btnDetay_OnClick"/>
                     </div>
                     <div class="col-md-5">
                         <asp:Image ID="resim" class="featurette-image img-responsive center-block" ImageUrl='<%# Eval("m_resim") %>' Width="350" Height="350" AlternateText="pizza" runat="server" />
                     </div>
                 </div>
+                <hr class="featurette-divider" />
             </ItemTemplate>
         </asp:Repeater>
 

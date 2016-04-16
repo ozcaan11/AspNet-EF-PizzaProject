@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -52,6 +53,47 @@ namespace Pizza_Bootstarp.site
             int id = uye.u_id;
 
             Response.Redirect("profilguncelle.aspx?id="+id+"");
+        }
+
+        protected void btnKaydet_OnClick(object sender, EventArgs e)
+        {
+            string _kadi = Session["kullanici"].ToString();
+            var q = db.Uyes.FirstOrDefault(x => x.u_kullanici_adi == _kadi);
+            if (resim.HasFile)
+            {
+                Uye uye = new Uye
+                {
+                    u_id = q.u_id,
+                    u_kullanici_adi = q.u_kullanici_adi,
+                    u_sifre = q.u_sifre,
+                    u_ad = q.u_ad,
+                    u_soyad = q.u_soyad,
+                    u_email = q.u_email,
+                    u_dogum_tarihi = q.u_dogum_tarihi,
+                    u_adres = q.u_adres,
+                    u_telefon = q.u_telefon,
+                    u_kayit_tarihi = q.u_kayit_tarihi,
+                    u_degistirilme_tarihi = DateTime.Now
+                };
+
+                resim.SaveAs(
+                        Server.MapPath("../files/images/user_images/" + uye.u_kullanici_adi + "-" + resim.FileName));
+                uye.u_resim = "../files/images/user_images/" + uye.u_kullanici_adi + "-" + resim.FileName;
+
+                image.ImageUrl = uye.u_resim;
+
+                db.Uyes.AddOrUpdate(uye);
+                db.SaveChanges();
+
+                Session["kullanici"] = uye.u_kullanici_adi;
+                ClearForm cl = new ClearForm();
+                cl.ClearTexts(Page);
+                Response.Redirect("profil.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('Lütfen bir profil resmi seçin ');</script>");
+            }
         }
     }
 }

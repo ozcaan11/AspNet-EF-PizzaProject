@@ -52,10 +52,10 @@ namespace Pizza_Bootstarp.site
                 db.Uyes.AddOrUpdate(uye);
                 db.SaveChanges();
 
+                Session["kullanici"] = uye.u_kullanici_adi;
                 ClearForm cl = new ClearForm();
                 cl.ClearTexts(Page);
-                Session["kullanici"] = txtKullaniciAdi.Text;
-                Response.Redirect("anasayfa.aspx");
+                Response.Redirect("profil.aspx");
             }
             else
             {
@@ -87,8 +87,8 @@ namespace Pizza_Bootstarp.site
 
                     ClearForm cl = new ClearForm();
                     cl.ClearTexts(Page);
-                    Session["kullanici"] = txtKullaniciAdi.Text;
-                    Response.Redirect("anasayfa.aspx");
+                    Session["kullanici"] = uye.u_kullanici_adi;
+                    Response.Redirect("profil.aspx");
                 }
             }
         }

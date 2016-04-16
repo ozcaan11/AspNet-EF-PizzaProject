@@ -42,7 +42,7 @@
                 <asp:Repeater runat="server" ID="rpMenu" OnItemDataBound="rpMenu_OnItemDataBound">
                     <ItemTemplate>
                         <tr>
-                            <td>
+                            <td><i>Kategori: </i> &nbsp;
                                 <asp:Button ID="btnKat" Visible="False" CommandArgument='<%# Eval("k_id") %>' runat="server" Text="Button" />
                                 <asp:Label ID="lblKat" runat="server" Text=""></asp:Label>
                             </td>

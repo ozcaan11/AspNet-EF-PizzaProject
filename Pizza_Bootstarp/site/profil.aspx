@@ -8,6 +8,12 @@
     <div class="row">
         <div class="col-sm-3">
             <asp:Image ID="image" Width="270" Height="270" CssClass="img-responsive" runat="server" />
+            <hr />
+            <h5 style="margin-left: 5px">Profil resmini güncelle</h5>
+            <asp:FileUpload ID="resim" runat="server" />
+            <div style="margin-bottom: 10px"></div>
+            <asp:Button ID="btnKaydet" runat="server" Width="50%" CssClass="btn btn-success" Text="Kaydet" OnClick="btnKaydet_OnClick" />
+           
         </div>
         <div class="col-sm-6">
             <table class="table">
@@ -56,7 +62,6 @@
             <div style="margin-bottom: 25px">
                 <asp:Button ID="btnGuncelle" CssClass="btn btn-primary" Width="100%" runat="server" Text="Güncelle" OnClick="btnGuncelle_OnClick" />
             </div>
-            <hr />
         </div>
         <div class="col-sm-3" style="background-color: #f5f5f5;">
             <h4 style="text-align: center">Yorum Geçmişi</h4>
@@ -72,8 +77,7 @@
                     <div class="clearfix"></div>
                 </ItemTemplate>
             </asp:Repeater>
-
         </div>
-
     </div>
+    <hr />
 </asp:Content>

@@ -22,6 +22,24 @@ namespace Pizza_Bootstarp.site {
         protected global::System.Web.UI.WebControls.Image image;
         
         /// <summary>
+        /// resim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload resim;
+        
+        /// <summary>
+        /// btnKaydet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnKaydet;
+        
+        /// <summary>
         /// rpUye control.
         /// </summary>
         /// <remarks>
