@@ -58,31 +58,36 @@ namespace Pizza_Bootstarp.site
 
         protected void btnGonder_OnClick(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(Request.QueryString["id"]);
-            if (Session["kullanici"] != null)
+            if (Page.IsValid)
             {
-                string k_adi = Session["kullanici"].ToString();
-                var user = db.Uyes.FirstOrDefault(x => x.u_kullanici_adi == k_adi);
-                if (user != null)
+                int id = Convert.ToInt32(Request.QueryString["id"]);
+                if (Session["kullanici"] != null)
                 {
-                    Yorum yorum = new Yorum
+                    string k_adi = Session["kullanici"].ToString();
+                    var user = db.Uyes.FirstOrDefault(x => x.u_kullanici_adi == k_adi);
+                    if (user != null)
                     {
-                        y_icerik = txtYorum.Text,
-                        y_yapma_tarihi = DateTime.Now,
-                        y_onay = false,
-                        m_id = id,
-                        u_id = user.u_id
-                    };
-                    db.Yorums.Add(yorum);
-                    db.SaveChanges();
-                    txtYorum.Text = "";
-                    MultiView1.ActiveViewIndex = 0;
-                }
+                        Yorum yorum = new Yorum
+                        {
+                            y_icerik = txtYorum.Text,
+                            y_yapma_tarihi = DateTime.Now,
+                            y_onay = false,
+                            m_id = id,
+                            u_id = user.u_id
+                        };
+                        db.Yorums.Add(yorum);
+                        db.SaveChanges();
 
-            }
-            else
-            {
-                MultiView1.ActiveViewIndex = 1;
+                        ClearForm cl = new ClearForm();
+                        cl.ClearTexts(Page);
+                        MultiView1.ActiveViewIndex = 0;
+                    }
+
+                }
+                else
+                {
+                    MultiView1.ActiveViewIndex = 1;
+                }
             }
         }
 

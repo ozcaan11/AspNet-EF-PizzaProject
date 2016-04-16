@@ -23,19 +23,55 @@ namespace Pizza_Bootstarp.admin
 
         protected void btnGuncelle_OnClicknClick(object sender, EventArgs e)
         {
-            var user = db.Admins.FirstOrDefault(u => u.ad_kullanici_adi == txtKullaniciAdi.Text);
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            string _kadi = Session["admin"].ToString();
+            var q = db.Admins.FirstOrDefault(x => x.ad_id == id);
 
-            if (user != null)
+            if (txtKullaniciAdi.Text == _kadi)
             {
-                Admin admin = new Admin();
-                admin.ad_kullanici_adi = txtKullaniciAdi.Text;
-                admin.ad_sifre = txtSifre.Text;
+                Admin admin = new Admin
+                {
+                    ad_id = q.ad_id,
+                    ad_kullanici_adi = txtKullaniciAdi.Text,
+                    ad_sifre = txtSifre.Text,
+                    ad_adi = q.ad_adi,
+                    ad_soyad = q.ad_soyad,
+                    ad_email = q.ad_email,
+                    ad_resim = q.ad_resim,
+                    ad_eklenme_tarihi = q.ad_eklenme_tarihi
+                };
                 db.Admins.AddOrUpdate(admin);
                 db.SaveChanges();
                 Session["admin"] = txtKullaniciAdi.Text;
                 Response.Redirect("anasayfa.aspx");
             }
-
+            else
+            {
+                var user = db.Admins.FirstOrDefault(u => u.ad_kullanici_adi == txtKullaniciAdi.Text);
+                if (user != null)
+                {
+                    Admin admin = new Admin
+                    {
+                        ad_id = q.ad_id,
+                        ad_kullanici_adi = txtKullaniciAdi.Text,
+                        ad_sifre = txtSifre.Text,
+                        ad_adi = q.ad_adi,
+                        ad_soyad = q.ad_soyad,
+                        ad_email = q.ad_email,
+                        ad_resim = q.ad_resim,
+                        ad_eklenme_tarihi = q.ad_eklenme_tarihi
+                    };
+                    db.Admins.AddOrUpdate(admin);
+                    db.SaveChanges();
+                    Session["admin"] = txtKullaniciAdi.Text;
+                    Response.Redirect("anasayfa.aspx");
+                }
+                else
+                {
+                    MultiView1.ActiveViewIndex = 0;
+                    txtKullaniciAdi.Focus();
+                }
+            }
         }
     }
 }

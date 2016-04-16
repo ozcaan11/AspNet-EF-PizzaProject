@@ -45,22 +45,17 @@ namespace Pizza_Bootstarp.admin
             Response.Redirect("kategori.aspx");
         }
 
-        protected void btnEkle_OnClick(object sender, EventArgs e)
-        {
-            Kategori kategori = new Kategori();
-            kategori.k_ad = txtAd.Text;
-            kategori.k_eklenme_tarihi = DateTime.Now;
-            db.Kategoris.Add(kategori);
-            db.SaveChanges();
-            Response.Redirect("kategori.aspx");
-        }
-
         protected void btnDuzenle_OnClick(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             int id = Convert.ToInt32(btn.CommandArgument);
 
             Response.Redirect("kategoriduzenle.aspx?id="+id+"");
+        }
+
+        protected void btnYeniKategori_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("kategoriekle.aspx");
         }
     }
 }

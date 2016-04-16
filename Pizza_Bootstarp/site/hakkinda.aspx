@@ -28,4 +28,5 @@
         tincidunt non, eleifend posuere odio. Donec nec odio vestibulum, aliquam leo mollis, 
         interdum urna. Mauris eleifend malesuada magna, eu euismod enim.
     </p>
+    <hr />
 </asp:Content>

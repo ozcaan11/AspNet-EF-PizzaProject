@@ -7,7 +7,9 @@
         <br />
         <br />
         <div class="input-group">
-            <span class="input-group-addon"></span>
+                    <span class="input-group-addon">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator0" ControlToValidate="txtAd" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                    </span>
             <asp:TextBox ID="txtAd" class="form-control" placeholder="Kategori adı" runat="server"></asp:TextBox>
         </div>
         <hr />

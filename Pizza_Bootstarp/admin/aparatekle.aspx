@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Master.Master" AutoEventWireup="true" CodeBehind="aparatduzenle.aspx.cs" Inherits="Pizza_Bootstarp.admin.aparatduzenle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Master.Master" AutoEventWireup="true" CodeBehind="aparatekle.aspx.cs" Inherits="Pizza_Bootstarp.admin.aparatekle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
@@ -22,7 +22,7 @@
         </div>
         <hr />
         <div>
-            <asp:Button runat="server" Text="Kaydet" CssClass="btn btn-success" Width="100%" ID="btnKaydet" OnClick="btnKaydet_OnClick" />
+            <asp:Button runat="server" Text="Ekle" CssClass="btn btn-success" Width="100%" ID="btnEkle" OnClick="btnEkle_OnClick" />
         </div>
     </div>
 </asp:Content>

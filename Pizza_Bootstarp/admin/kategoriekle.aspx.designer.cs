@@ -10,24 +10,33 @@
 namespace Pizza_Bootstarp.admin {
     
     
-    public partial class aparat {
+    public partial class kategoriekle {
         
         /// <summary>
-        /// btnYeniAparat control.
+        /// RequiredFieldValidator0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnYeniAparat;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator0;
         
         /// <summary>
-        /// rpAparatlar control.
+        /// txtAd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpAparatlar;
+        protected global::System.Web.UI.WebControls.TextBox txtAd;
+        
+        /// <summary>
+        /// btnEkle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEkle;
     }
 }

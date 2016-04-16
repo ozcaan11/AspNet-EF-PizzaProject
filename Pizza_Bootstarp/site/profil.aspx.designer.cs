@@ -13,6 +13,15 @@ namespace Pizza_Bootstarp.site {
     public partial class profil {
         
         /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image;
+        
+        /// <summary>
         /// rpUye control.
         /// </summary>
         /// <remarks>
@@ -31,12 +40,12 @@ namespace Pizza_Bootstarp.site {
         protected global::System.Web.UI.WebControls.Button btnGuncelle;
         
         /// <summary>
-        /// image control.
+        /// rpHareketDokumu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image image;
+        protected global::System.Web.UI.WebControls.Repeater rpHareketDokumu;
     }
 }

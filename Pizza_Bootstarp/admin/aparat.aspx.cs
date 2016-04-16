@@ -60,15 +60,9 @@ namespace Pizza_Bootstarp.admin
             Response.Redirect("aparatduzenle.aspx?id="+id+"");
         }
 
-        protected void btnEkle_OnClick(object sender, EventArgs e)
+        protected void btnYeniAparat_OnClick(object sender, EventArgs e)
         {
-            Aparat aparat = new Aparat();
-            aparat.a_ad = txtAd.Text;
-            aparat.a_fiyat = Convert.ToDouble(txtFiyat.Text);
-            aparat.a_eklenme_tarihi=DateTime.Now;
-            db.Aparats.Add(aparat);
-            db.SaveChanges();
-            Response.Redirect("aparat.aspx");
+            Response.Redirect("aparatekle.aspx");
         }
     }
 }

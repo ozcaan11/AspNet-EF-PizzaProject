@@ -31,6 +31,15 @@ namespace Pizza_Bootstarp.site {
         protected global::System.Web.UI.WebControls.View ViewFail;
         
         /// <summary>
+        /// RequiredFieldValidator0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator0;
+        
+        /// <summary>
         /// txtKullaniciAdi control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Pizza_Bootstarp.site {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtKullaniciAdi;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// txtSifre control.

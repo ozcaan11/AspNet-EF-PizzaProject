@@ -27,6 +27,10 @@ namespace Pizza_Bootstarp.site
                 Session["kullanici"] = txtKullaniciAdi.Text;
                 Response.Redirect("anasayfa.aspx");
             }
+            else
+            {
+                Response.Redirect("giris.aspx");
+            }
         }
 
         protected void btnKaydol_OnClick(object sender, EventArgs e)

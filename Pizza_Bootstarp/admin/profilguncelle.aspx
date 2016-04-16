@@ -16,11 +16,16 @@
             </asp:MultiView>
             <br />
             <div class="input-group">
-                <span class="input-group-addon"></span>
+            <span class="input-group-addon">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtKullaniciAdi" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+            </span>
                 <asp:TextBox ID="txtKullaniciAdi" CssClass="form-control" placeholder="Kullanıcı adı" runat="server"></asp:TextBox>
             </div>
+            <br />
             <div class="input-group">
-                <span class="input-group-addon"></span>
+            <span class="input-group-addon">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtSifre" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+            </span>
                 <asp:TextBox ID="txtSifre" CssClass="form-control" placeholder="Şifre" TextMode="Password" runat="server"></asp:TextBox>
             </div>
             <div style="margin: 15px 0 30px 0; text-align: left">

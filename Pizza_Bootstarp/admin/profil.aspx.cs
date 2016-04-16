@@ -29,8 +29,10 @@ namespace Pizza_Bootstarp.admin
 
         protected void btnGuncelle_OnClick(object sender, EventArgs e)
         {
-            //Response.Redirect("profilguncelle.aspx");
-            btnGuncelle.Text = "Admin profilinde güncelleme yapılamıyor";
+            string a = Session["admin"].ToString();
+            int id = db.Admins.FirstOrDefault(x => x.ad_kullanici_adi == a).ad_id;
+
+            Response.Redirect("profilguncelle.aspx?id="+id+"");
         }
     }
 }

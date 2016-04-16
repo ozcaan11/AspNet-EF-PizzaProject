@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpBody" runat="server">
     <div class="col-md-6" style="margin: 10px 0 20px 5px">
-        <asp:Button ID="btnYeniKategori" CssClass="btn btn-primary" data-toggle="modal" data-target="#myModal" OnClientClick="javascript:return false;" runat="server" Text="Yeni Kategori Ekle" />
+        <asp:Button ID="btnYeniKategori" CssClass="btn btn-primary" runat="server" Text="Yeni Kategori Ekle" OnClick="btnYeniKategori_OnClick" />
     </div>
     <div class="clearfix"></div>
     <div class="table-responsive">
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Modal Kategori Ekleme -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<%--    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -47,7 +47,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                    <span class="input-group-addon">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator0" ControlToValidate="txtAd" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                    </span>
                         <asp:TextBox ID="txtAd" CssClass="form-control" placeholder="Kategori adı" runat="server"></asp:TextBox>
                     </div>
                 </div>
@@ -57,5 +59,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 </asp:Content>

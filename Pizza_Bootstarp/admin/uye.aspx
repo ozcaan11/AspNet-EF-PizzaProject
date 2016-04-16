@@ -3,18 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpBody" runat="server">
-
-    <asp:MultiView ID="MultiView1" runat="server">
-        <asp:View ID="ViewFail" runat="server">
-            <div class="alert alert-danger" role="alert">
-                <p>
-                    Kullanıcı adı zaten kullanılmaktadır. Farklı bir kullanıcı adı deneyin.
-                </p>
-            </div>
-        </asp:View>
-    </asp:MultiView>
     <div class="col-md-6" style="margin: 10px 0 20px 5px">
-        <asp:Button ID="btnYeniUye" data-toggle="modal" data-target="#myModal" OnClientClick="javascript:return false;" CssClass="btn btn-primary" runat="server" Text="Yeni Üye Ekle" />
+        <asp:Button ID="btnYeniUye" CssClass="btn btn-primary" runat="server" Text="Yeni Üye Ekle" OnClick="btnYeniUye_OnClick" />
     </div>
     <div class="clearfix"></div>
     <div class="table-responsive">
@@ -52,7 +42,7 @@
     </div>
 
     <!-- Modal Ekleme -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <%--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -61,41 +51,62 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtKullaniciAdi" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtKullaniciAdi" CssClass="form-control" placeholder="Kullanıcı adı" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtSifre" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtSifre" CssClass="form-control" placeholder="Şifre" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtAd" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtAd" CssClass="form-control" placeholder="Ad" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtSoyad" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtSoyad" CssClass="form-control" placeholder="Soyad" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtEmail" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtEmail" CssClass="form-control" placeholder="E-mail" runat="server" TextMode="Email"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txtDt" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtDt" CssClass="form-control" placeholder="Doğum Tarihi" runat="server" TextMode="DateTime"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
                         <span class="input-group-addon"></span>
                         <asp:TextBox ID="txtTelefon" CssClass="form-control" placeholder="Telefon" runat="server" TextMode="Phone"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
-                        <asp:TextBox ID="txtResim" CssClass="form-control" placeholder="Resim" runat="server"></asp:TextBox>
+                        <span class="input-group-addon"></span><span class="input-group-addon">Resim &nbsp;&nbsp;</span>
+                        <asp:FileUpload ID="fuResim" CssClass="form-control" runat="server" />
                     </div>
+                    <br />
                     <div class="input-group">
                         <span class="input-group-addon"></span>
                         <asp:TextBox ID="txtAdres" CssClass="form-control" placeholder="Adres" Height="75" runat="server" TextMode="MultiLine"></asp:TextBox>
                     </div>
+                    <br />
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
@@ -103,5 +114,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 </asp:Content>

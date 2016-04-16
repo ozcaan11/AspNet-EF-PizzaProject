@@ -22,34 +22,25 @@ namespace Pizza_Bootstarp.admin
                 Response.Redirect("anasayfa.aspx");
             }
 
-            var data = from m in db.Menus
-                select m;
-            rpMenuler.DataSource = data.ToList();
-
-            var kat = (from d in db.Kategoris
-                       orderby d.k_eklenme_tarihi descending 
-                       select new
-                       {
-                           k_id = d.k_id,
-                           k_ad = d.k_ad
-                       }).ToList();
-            DropDownListKategori.DataSource = kat;
-            DropDownListKategori.DataTextField = "k_ad";
-            DropDownListKategori.DataValueField = "k_id";
-
             if (!IsPostBack)
             {
-               rpMenuler.DataBind(); 
-            DropDownListKategori.DataBind();
+                var data = from m in db.Menus
+                           orderby m.m_eklenme_tarihi descending
+                           select m;
+                rpMenuler.DataSource = data.ToList();
+
+
+
+                if (!IsPostBack)
+                {
+                    rpMenuler.DataBind();
+                }
+                for (int i = 0; i < rpMenuler.Items.Count; i++)
+                {
+                    Label lblCount = (Label)rpMenuler.Items[i].FindControl("lblCount");
+                    lblCount.Text = (i + 1).ToString();
+                } 
             }
-            for (int i = 0; i < rpMenuler.Items.Count; i++)
-            {
-                Label lblCount = (Label)rpMenuler.Items[i].FindControl("lblCount");
-                lblCount.Text = (i + 1).ToString();
-            }
-
-
-
         }
 
         protected void btnSil_OnClick(object sender, EventArgs e)
@@ -65,26 +56,11 @@ namespace Pizza_Bootstarp.admin
 
         protected void btnDuzenle_OnClick(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            Button btn = (Button) sender;
             string arg = btn.CommandArgument;
-            Response.Redirect("menuduzenle.aspx?id="+arg+"");
+            Response.Redirect("menuduzenle.aspx?id=" + arg + "");
         }
 
-        protected void btnEkle_OnClick(object sender, EventArgs e)
-        {
-            Menu menu = new Menu();
-            menu.m_baslik = txtBaslik.Text;
-            menu.m_aciklama = txtAciklama.Text;
-            menu.m_fiyat = Convert.ToDouble(txtFiyat.Text);
-            menu.m_eklenme_tarihi = DateTime.Now;
-            menu.m_degistirilme_tarihi = DateTime.Now;
-            fuResim.SaveAs(Server.MapPath("../files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName));
-            menu.m_resim = "../files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName;
-            menu.k_id = Convert.ToInt32(DropDownListKategori.SelectedItem.Value);
-            db.Menus.Add(menu);
-            db.SaveChanges();
-            Response.Redirect("menu.aspx");
-        }
 
         protected void rpMenuler_OnItemDataBound(object sender, RepeaterItemEventArgs e)
         {
@@ -101,6 +77,11 @@ namespace Pizza_Bootstarp.admin
             {
                 lblKat.Text = "Kategori bulunamadı";
             }
+        }
+
+        protected void btnYeniMenu_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("menuekle.aspx");
         }
     }
 }

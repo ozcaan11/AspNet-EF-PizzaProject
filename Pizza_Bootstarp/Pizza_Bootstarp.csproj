@@ -70,6 +70,11 @@
     <Content Include="admin\anasayfa.aspx" />
     <Content Include="admin\aparat.aspx" />
     <Content Include="admin\aparatduzenle.aspx" />
+    <Content Include="admin\aparatekle.aspx" />
+    <Content Include="admin\kategoriekle.aspx" />
+    <Content Include="admin\menuekle.aspx" />
+    <Content Include="admin\uyeekle.aspx" />
+    <Content Include="files\images\user_images\uye.png" />
     <Content Include="site\hakkinda.aspx" />
     <Content Include="site\iletisim.aspx" />
     <Content Include="Content\carousel.css" />
@@ -147,6 +152,35 @@
     <Compile Include="admin\aparatduzenle.aspx.designer.cs">
       <DependentUpon>aparatduzenle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\aparatekle.aspx.cs">
+      <DependentUpon>aparatekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\aparatekle.aspx.designer.cs">
+      <DependentUpon>aparatekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\kategoriekle.aspx.cs">
+      <DependentUpon>kategoriekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\kategoriekle.aspx.designer.cs">
+      <DependentUpon>kategoriekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\menuekle.aspx.cs">
+      <DependentUpon>menuekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\menuekle.aspx.designer.cs">
+      <DependentUpon>menuekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\uyeekle.aspx.cs">
+      <DependentUpon>uyeekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\uyeekle.aspx.designer.cs">
+      <DependentUpon>uyeekle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClearForm.cs" />
     <Compile Include="site\hakkinda.aspx.cs">
       <DependentUpon>hakkinda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,12 +282,14 @@
     </Compile>
     <Compile Include="site\giris.aspx.cs">
       <DependentUpon>giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\giris.aspx.designer.cs">
       <DependentUpon>giris.aspx</DependentUpon>
     </Compile>
     <Compile Include="site\kaydol.aspx.cs">
       <DependentUpon>kaydol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\kaydol.aspx.designer.cs">
       <DependentUpon>kaydol.aspx</DependentUpon>
@@ -280,12 +316,14 @@
     </Compile>
     <Compile Include="site\profil.aspx.cs">
       <DependentUpon>profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\profil.aspx.designer.cs">
       <DependentUpon>profil.aspx</DependentUpon>
     </Compile>
     <Compile Include="site\profilguncelle.aspx.cs">
       <DependentUpon>profilguncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="site\profilguncelle.aspx.designer.cs">
       <DependentUpon>profilguncelle.aspx</DependentUpon>
@@ -305,7 +343,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="files\images\menu_images\" />
-    <Folder Include="files\images\user_images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

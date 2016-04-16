@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pizza_Bootstarp.site {
+namespace Pizza_Bootstarp.admin {
     
     
-    public partial class kaydol {
+    public partial class uyeekle {
         
         /// <summary>
         /// MultiView1 control.
@@ -166,12 +166,12 @@ namespace Pizza_Bootstarp.site {
         protected global::System.Web.UI.WebControls.TextBox txtAdres;
         
         /// <summary>
-        /// btnKaydol control.
+        /// btnEkle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnKaydol;
+        protected global::System.Web.UI.WebControls.Button btnEkle;
     }
 }

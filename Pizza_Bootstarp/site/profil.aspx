@@ -6,12 +6,12 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpBody" runat="server">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <asp:Image ID="image" Width="270" Height="270" CssClass="img-responsive" runat="server" />
         </div>
         <div class="col-sm-6">
             <table class="table">
-                <caption style="color: #FF0000">Sadece kullanıcı adı ve şifrenizi değiştirebilirsiniz.</caption>
+                <caption></caption>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -57,6 +57,22 @@
                 <asp:Button ID="btnGuncelle" CssClass="btn btn-primary" Width="100%" runat="server" Text="Güncelle" OnClick="btnGuncelle_OnClick" />
             </div>
             <hr />
+        </div>
+        <div class="col-sm-3" style="background-color: #f5f5f5;">
+            <h4 style="text-align: center">Yorum Geçmişi</h4>
+            <div class="clearfix"></div>
+            <asp:Repeater ID="rpHareketDokumu" runat="server">
+                <ItemTemplate>
+                    <h5>
+                        <%# Eval("y_icerik").ToString().Length>=20 ? Eval("y_icerik").ToString().Substring(0,20) +" .." : Eval("y_icerik") %>
+                        &nbsp;<p style="float: right; font-size: smaller">
+                            <%# Eval("y_yapma_tarihi") %>
+                        </p>
+                    </h5>
+                    <div class="clearfix"></div>
+                </ItemTemplate>
+            </asp:Repeater>
+
         </div>
 
     </div>

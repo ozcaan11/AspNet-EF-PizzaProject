@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Pizza_Bootstarp.entities;
 
-namespace Pizza_Bootstarp.site
+namespace Pizza_Bootstarp.admin
 {
-    public partial class kaydol : System.Web.UI.Page
+    public partial class uyeekle : System.Web.UI.Page
     {
         MyEntity db = new MyEntity();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] == null)
+            {
+                Response.Redirect("anasayfa.aspx");
+            }
         }
 
-        protected void btnKaydol_OnClick(object sender, EventArgs e)
+        protected void btnEkle_OnClick(object sender, EventArgs e)
         {
             var user = db.Uyes.FirstOrDefault(u => u.u_kullanici_adi == txtKullaniciAdi.Text);
 
@@ -34,10 +36,7 @@ namespace Pizza_Bootstarp.site
                 uye.u_ad = txtAd.Text;
                 uye.u_soyad = txtSoyad.Text;
                 uye.u_email = txtEmail.Text;
-                uye.u_telefon = txtTelefon.Text;
-                uye.u_adres = txtAdres.Text;
-                uye.u_dogum_tarihi = Convert.ToDateTime(txtDt.Text);
-                uye.u_kayit_tarihi = DateTime.Now;
+
                 if (fuResim.HasFile)
                 {
                     fuResim.SaveAs(
@@ -50,15 +49,18 @@ namespace Pizza_Bootstarp.site
                 {
                     uye.u_resim = "../files/images/user_images/uye.png";
                 }
+
+                uye.u_telefon = txtTelefon.Text;
+                uye.u_adres = txtAdres.Text;
+                uye.u_dogum_tarihi = Convert.ToDateTime(txtDt.Text);
+                uye.u_kayit_tarihi = DateTime.Now;
                 db.Uyes.Add(uye);
                 db.SaveChanges();
 
-                Session["kullanici"] = txtKullaniciAdi.Text;
-
                 ClearForm cl = new ClearForm();
                 cl.ClearTexts(Page);
-
-                Response.Redirect("anasayfa.aspx");
+                Session["kullanici"] = txtKullaniciAdi.Text;
+                Response.Redirect("uye.aspx");
             }
         }
     }

@@ -95,10 +95,11 @@
                 <asp:View ID="View2" runat="server">
                     <div class="alert alert-danger alert-dismissible" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <strong>Dikkat! </strong> Yorum yapabilmek için giriş yapınız .
+                        <strong>Dikkat! </strong>Yorum yapabilmek için giriş yapınız .
                     </div>
                 </asp:View>
             </asp:MultiView>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="red" ControlToValidate="txtYorum" runat="server" ErrorMessage="Yorumunuz boş olamaz!"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;<br />
             <div class="input-group">
                 <span class="input-group-addon"></span>
                 <asp:TextBox ID="txtYorum" CssClass="form-control" placeholder="Yorumunuz..." Height="120" runat="server" TextMode="MultiLine"></asp:TextBox>

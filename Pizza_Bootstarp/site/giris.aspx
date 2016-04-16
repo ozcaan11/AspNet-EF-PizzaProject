@@ -8,7 +8,11 @@
     <div class="row">
         <hr />
         <div class="col-sm-6">
+            <h3>Giriş Yapın</h3>
             <br />
+            <h5 style="margin: 5px 0 15px 5px">
+                <asp:Label ID="lblYanlis" ForeColor="red" runat="server" Text=""></asp:Label>
+            </h5>
             <div class="input-group">
                 <span class="input-group-addon"></span>
                 <asp:TextBox ID="txtKullaniciAdi" CssClass="form-control" placeholder="Kullanıcı adı" runat="server"></asp:TextBox>

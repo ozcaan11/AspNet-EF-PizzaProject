@@ -14,6 +14,7 @@ namespace Pizza_Bootstarp.admin
     public partial class menuduzenle : System.Web.UI.Page
     {
         MyEntity db = new MyEntity();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["admin"] == null)
@@ -25,12 +26,12 @@ namespace Pizza_Bootstarp.admin
                 int id = Convert.ToInt32(Request.QueryString["id"]);
                 var menu = db.Menus.FirstOrDefault(x => x.m_id == id);
                 var kat = (from d in db.Kategoris
-                           orderby d.k_eklenme_tarihi descending
-                           select new
-                           {
-                               k_id = d.k_id,
-                               k_ad = d.k_ad
-                           }).ToList();
+                    orderby d.k_eklenme_tarihi descending
+                    select new
+                    {
+                        k_id = d.k_id,
+                        k_ad = d.k_ad
+                    }).ToList();
                 DropDownListKategori.DataSource = kat;
                 DropDownListKategori.DataTextField = "k_ad";
                 DropDownListKategori.DataValueField = "k_id";
@@ -63,8 +64,20 @@ namespace Pizza_Bootstarp.admin
             menu.m_eklenme_tarihi = mn.eklenme;
             menu.m_degistirilme_tarihi = DateTime.Now;
             menu.k_id = Convert.ToInt32(DropDownListKategori.SelectedItem.Value);
-            fuResim.SaveAs(Server.MapPath("~/files/images/menu_images/" + menu.m_baslik +"-" +menu.m_fiyat+ "-" + fuResim.FileName));
-            menu.m_resim = "~/files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" + fuResim.FileName;
+            if (fuResim.HasFile)
+            {
+                fuResim.SaveAs(
+                    Server.MapPath("~/files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" +
+                                   fuResim.FileName));
+                menu.m_resim = "~/files/images/menu_images/" + menu.m_baslik + "-" + menu.m_fiyat + "-" +
+                               fuResim.FileName;
+            }
+            else
+            {
+                var _mnu = db.Menus.FirstOrDefault(x => x.m_id == id);
+                menu.m_resim = _mnu.m_resim;
+            }
+
             db.Menus.AddOrUpdate(menu);
             db.SaveChanges();
             Response.Redirect("menu.aspx");

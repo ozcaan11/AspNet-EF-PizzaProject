@@ -9,9 +9,5 @@ namespace Pizza_Bootstarp.admin
 {
     public partial class iletisim : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

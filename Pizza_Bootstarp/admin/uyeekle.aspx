@@ -1,10 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site/Master.Master" AutoEventWireup="true" CodeBehind="kaydol.aspx.cs" Inherits="Pizza_Bootstarp.site.kaydol" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Master.Master" AutoEventWireup="true" CodeBehind="uyeekle.aspx.cs" Inherits="Pizza_Bootstarp.admin.uyeekle" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cpHead" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cpSlider" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cpBody" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cpBody" runat="server">
     <div class="container" role="main">
         <div class="row">
             <hr />
@@ -68,7 +65,7 @@
                 </div>
                 <br />
                 <div>
-                    <asp:Button ID="btnKaydol" runat="server" Text="Kaydol" Height="40" Width="100%" CssClass="btn btn-success" OnClick="btnKaydol_OnClick" />
+                    <asp:Button ID="btnEkle" runat="server" Text="Ekle" Height="40" Width="100%" CssClass="btn btn-success" OnClick="btnEkle_OnClick" />
                 </div>
                 <hr />
             </div>

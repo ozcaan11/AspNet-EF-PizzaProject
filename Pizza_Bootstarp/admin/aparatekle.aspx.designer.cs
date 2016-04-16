@@ -10,7 +10,7 @@
 namespace Pizza_Bootstarp.admin {
     
     
-    public partial class aparatduzenle {
+    public partial class aparatekle {
         
         /// <summary>
         /// RequiredFieldValidator0 control.
@@ -49,12 +49,12 @@ namespace Pizza_Bootstarp.admin {
         protected global::System.Web.UI.WebControls.TextBox txtFiyat;
         
         /// <summary>
-        /// btnKaydet control.
+        /// btnEkle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnKaydet;
+        protected global::System.Web.UI.WebControls.Button btnEkle;
     }
 }

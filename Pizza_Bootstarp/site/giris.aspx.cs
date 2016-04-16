@@ -30,6 +30,10 @@ namespace Pizza_Bootstarp.site
                 Session["kullanici"] = txtKullaniciAdi.Text;
                 Response.Redirect("anasayfa.aspx");
             }
+            else
+            {
+                lblYanlis.Text = "Kullanıcı adı veya şifre yanlış!";
+            }
         }
     }
 }

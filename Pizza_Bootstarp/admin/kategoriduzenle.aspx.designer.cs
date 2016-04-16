@@ -13,6 +13,15 @@ namespace Pizza_Bootstarp.admin {
     public partial class kategoriduzenle {
         
         /// <summary>
+        /// RequiredFieldValidator0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator0;
+        
+        /// <summary>
         /// txtAd control.
         /// </summary>
         /// <remarks>

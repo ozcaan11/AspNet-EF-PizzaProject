@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpBody" runat="server">
     <div class="col-md-6" style="margin: 10px 0 20px 5px">
-        <asp:Button ID="btnYeniAparat" CssClass="btn btn-primary" data-toggle="modal" data-target="#myModal" OnClientClick="javascript:return false;" runat="server" Text="Yeni Aparat Ekle" />
+        <asp:Button ID="btnYeniAparat" CssClass="btn btn-primary" runat="server" Text="Yeni Aparat Ekle" OnClick="btnYeniAparat_OnClick" />
     </div>
     <div class="clearfix"></div>
     <div class="table-responsive">
@@ -40,18 +40,21 @@
     </div>
 
     <!-- Modal Aparat Ekleme -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<%--    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Yeni Aparat Ekle</h4>
+                    <h4 class="modal-title" id="myModalLabel">Yeni Aparat Ekleme</h4>
                 </div>
                 <div class="modal-body">
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+
+                        </span>
                         <asp:TextBox ID="txtAd" CssClass="form-control" placeholder="Aparat adı" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
                         <span class="input-group-addon"></span>
                         <asp:TextBox ID="txtFiyat" CssClass="form-control" placeholder="Fiyat" runat="server"></asp:TextBox>
@@ -63,5 +66,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 </asp:Content>

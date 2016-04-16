@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpBody" runat="server">
     <div class="col-md-6" style="margin: 10px 0 20px 5px">
-        <asp:Button ID="btnYeniMenu" CssClass="btn btn-primary" runat="server" Text="Yeni Menü Ekle" data-toggle="modal" data-target="#myModal" OnClientClick="javascript:return false;" />
+        <asp:Button ID="btnYeniMenu" CssClass="btn btn-primary" runat="server" Text="Yeni Menü Ekle" OnClick="btnYeniMenu_OnClick" />
     </div>
     <div class="clearfix"></div>
     <div class="table-responsive">
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Modal Menu Ekleme -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <%--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -56,23 +56,35 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator0" ControlToValidate="txtBaslik" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtBaslik" class="form-control" placeholder="Başlık" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
-                        <asp:TextBox ID="txtAciklama" class="form-control" placeholder="Açıklama" TextMode="MultiLine" runat="server"></asp:TextBox>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtAciklama" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
+                        <asp:TextBox ID="txtAciklama" class="form-control" placeholder="Açıklama" TextMode="MultiLine" Height="150" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtFiyat" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span>
                         <asp:TextBox ID="txtFiyat" class="form-control" placeholder="Fiyat" runat="server"></asp:TextBox>
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon"></span>
+                        <span class="input-group-addon">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="fuResim" runat="server" BackColor="red" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        </span><span class="input-group-addon">Resim &nbsp;&nbsp;</span>
                         <asp:FileUpload ID="fuResim" CssClass="form-control" runat="server" />
                     </div>
+                    <br />
                     <div class="input-group">
-                        <span class="input-group-addon">Kategori</span>
+                        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="input-group-addon"> Kategori </span>&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:DropDownList ID="DropDownListKategori" CssClass="btn btn-info dropdown-toggle" runat="server"></asp:DropDownList>
                     </div>
                 </div>
@@ -82,5 +94,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
+
 </asp:Content>
