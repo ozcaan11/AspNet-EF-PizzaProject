@@ -1,7 +1,7 @@
 ###Online pizza satış sitesi
 --------------
 
-Detaylı bilgi için [wiki](../../wiki)
+#####Detaylı bilgi için [wiki](../../wiki)'yi inceleyin..
 
 
 ##### Kullanılan Araçlar
