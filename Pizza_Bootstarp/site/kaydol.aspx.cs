@@ -14,7 +14,10 @@ namespace Pizza_Bootstarp.site
         MyEntity db = new MyEntity();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["kullanici"] != null)
+            {
+                Response.Redirect("anasayfa.aspx");
+            }
         }
 
         protected void btnKaydol_OnClick(object sender, EventArgs e)
@@ -58,7 +61,7 @@ namespace Pizza_Bootstarp.site
                 ClearForm cl = new ClearForm();
                 cl.ClearTexts(Page);
 
-                Response.Redirect("anasayfa.aspx");
+                Response.Redirect("profil.aspx");
             }
         }
     }

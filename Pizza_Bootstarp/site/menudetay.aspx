@@ -11,7 +11,7 @@
             <caption></caption>
             <thead>
                 <tr>
-                    <th><span class="glyphicon glyphicon-align-left"></span>Aparatlar</th>
+                    <th><span class="glyphicon glyphicon-align-left"></span>&nbsp;&nbsp;&nbsp;Aparatlar</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +35,7 @@
             <caption></caption>
             <thead>
                 <tr>
-                    <th><span class="glyphicon glyphicon-cutlery"></span>Menü Bilgileri</th>
+                    <th><span class="glyphicon glyphicon-cutlery"></span>&nbsp;&nbsp;&nbsp;Menü Bilgileri</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,7 +54,7 @@
                             <td><%# Eval("m_aciklama") %></td>
                         </tr>
                         <tr>
-                            <td><%# Eval("m_fiyat") %></td>
+                            <td><i>Fiyat: </i><%# Eval("m_fiyat") %>&nbsp; TL</td>
                         </tr>
                         <tr>
                             <td><%# Eval("m_eklenme_tarihi") %></td>
