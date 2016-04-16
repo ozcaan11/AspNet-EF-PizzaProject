@@ -1,7 +1,7 @@
 ###Online pizza satış sitesi
 --------------
 
-#####Detaylı bilgi için [wiki](../../wiki)'yi inceleyin..
+#####Detaylı bilgi için [WIKI](../../wiki)'yi inceleyin..
 
 
 ##### Kullanılan Araçlar
@@ -13,6 +13,9 @@
 ---- 
 
 | Entityframework (Sql Server 2012)
+----
+
+| Bootstrap 3.0
 ----
 
 ---------------
