@@ -2,7 +2,7 @@
 
 #####Detaylı bilgi için [WIKI](../../wiki)'yi inceleyin..
 
---------------
+---------
 
 #### Kullanılan Araçlar
 
